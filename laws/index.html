@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; media-src 'self'; manifest-src 'self'; script-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://laws-api.prifoxy.com; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self' https://www.law.go.kr; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#124a34">
+    <meta name="description" content="국가법령정보센터의 현행 법령을 검색하고 조문을 한 화면에서 확인하는 통합 검색">
+    <link rel="canonical" href="https://prifoxy.com/laws/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="법령 통합 검색 · Prifoxy">
+    <meta property="og:description" content="보안·개인정보·AI 관련 현행 법령을 검색하고 조문을 한 화면에서 확인합니다.">
+    <meta property="og:url" content="https://prifoxy.com/laws/">
+    <meta property="og:image" content="https://prifoxy.com/assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="법령 통합 검색 · Prifoxy">
+    <meta name="twitter:description" content="보안·개인정보·AI 관련 현행 법령을 검색하고 조문을 한 화면에서 확인합니다.">
+    <meta name="twitter:image" content="https://prifoxy.com/assets/og.png">
+    <title>Prifoxy</title>
+    <script src="/assets/theme.js?v=a1fbe31f2050"></script>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css?v=e3d6904f0f5a">
+    <script src="/assets/laws.js?v=20260903-laws2" defer></script>
+  <script src="/assets/privacy.js?v=20260906" defer></script>
+  <script src="/assets/pageviews.js?v=20260906-security" defer></script>
+  </head>
+  <body>
+    
+    <header class="site-header">
+  <a class="wordmark" href="/" aria-label="Prifoxy 홈"><strong>Prifoxy</strong></a>
+  <nav aria-label="주요 메뉴">
+    <a href="/">Home</a>
+    <a href="/notes/">Blog</a>
+    <a href="/projects/">Project</a>
+    <a href="/laws/" aria-current="page">Laws</a>
+    <a href="/about/">About</a>
+  </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="다크 모드" aria-pressed="false" title="다크 모드로 전환" hidden>
+    <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.8 8.8 0 1 0 20.5 14.2Z"/></svg>
+    <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</header>
+
+
+    <main class="laws-page">
+      <section class="laws-hero page-section-intro" aria-labelledby="laws-heading">
+        <div><span>LAWS &amp; STANDARDS</span><h1 id="laws-heading">법령 통합 검색</h1></div>
+        <p>국가법령정보센터의 현행 법령을 검색하고 조문까지 이 화면에서 이어서 확인합니다.</p>
+      </section>
+
+      <section class="law-search-panel" aria-labelledby="law-search-heading">
+        <div class="law-search-heading">
+          <div><span>SEARCH</span><h2 id="law-search-heading">무엇을 확인하고 있나요?</h2></div>
+          <p>검색어는 사이트의 보안 중계 API를 거쳐 공식 데이터에서 조회됩니다. API 인증값은 브라우저에 전달되지 않습니다.</p>
+        </div>
+        <form class="law-search-form" action="https://www.law.go.kr/lsSc.do" method="get" target="_blank" rel="noopener" data-law-form>
+          <input type="hidden" name="menuId" value="1">
+          <input type="hidden" name="subMenuId" value="15">
+          <label for="law-search">전체 현행 법령 검색</label>
+          <div class="law-scope-bar" aria-label="검색 범위">
+            <button class="is-active" type="button" data-law-scope="name" aria-pressed="true">법령명</button>
+            <button type="button" data-law-scope="body" aria-pressed="false">본문</button>
+          </div>
+          <div class="law-search-control">
+            <input id="law-search" name="query" type="search" placeholder="예: 개인정보 보호법, 침해사고, 고영향 인공지능" autocomplete="off" data-law-search>
+            <button type="submit" data-law-submit>통합 검색</button>
+          </div>
+        </form>
+        <div class="law-search-meta">
+          <p class="law-api-status" role="status" aria-live="polite" data-law-api-status>검색어를 입력하면 전체 현행 법령에서 찾습니다.</p>
+          <a href="https://www.law.go.kr/lsSc.do?menuId=1&amp;subMenuId=15" target="_blank" rel="noopener noreferrer" data-law-official-search>공식 사이트에서 직접 검색 <span aria-hidden="true">↗</span></a>
+        </div>
+        <noscript><p class="law-noscript">통합 검색에는 JavaScript가 필요합니다. 위 공식 사이트 검색을 이용해 주세요.</p></noscript>
+      </section>
+
+      <section class="law-live-results" aria-labelledby="law-live-results-heading" data-law-live-results hidden>
+        <div class="law-results-heading">
+          <div><span>OFFICIAL DATA</span><h2 id="law-live-results-heading">전체 법령 검색 결과</h2></div>
+          <p data-law-live-summary></p>
+        </div>
+        <div class="law-live-list" data-law-live-list aria-live="polite"></div>
+        <button class="law-load-more" type="button" data-law-load-more hidden>다음 30건 더 보기</button>
+      </section>
+
+      <section class="law-viewer" aria-labelledby="law-viewer-heading" data-law-viewer hidden aria-busy="false">
+        <header class="law-viewer-header">
+          <div>
+            <span>IN-PAGE VIEWER</span>
+            <h2 id="law-viewer-heading" data-law-viewer-title>법령 본문</h2>
+            <p data-law-viewer-meta></p>
+          </div>
+          <div class="law-viewer-actions">
+            <a href="https://www.law.go.kr" target="_blank" rel="noopener noreferrer" data-law-viewer-link>공식 원문 <span aria-hidden="true">↗</span></a>
+            <button type="button" data-law-viewer-close>닫기</button>
+          </div>
+        </header>
+        <div class="law-article-search">
+          <label for="law-article-search">불러온 법령 안에서 찾기</label>
+          <input id="law-article-search" type="search" placeholder="예: 안전성 확보조치" autocomplete="off" data-law-article-search>
+        </div>
+        <p class="law-viewer-status" role="status" aria-live="polite" data-law-viewer-status></p>
+        <div class="law-articles" data-law-articles></div>
+      </section>
+
+      <section class="law-results" aria-labelledby="law-results-heading">
+        <div class="law-results-heading">
+          <div><span>QUICK ACCESS</span><h2 id="law-results-heading">자주 확인하는 법령</h2></div>
+          <p>공식 API 연결 전에도 이용할 수 있는 주요 목록</p>
+        </div>
+        <div class="law-filter-bar" aria-label="법령 분야 필터">
+          <button class="is-active" type="button" data-law-filter="all" aria-pressed="true">전체</button>
+          <button type="button" data-law-filter="privacy" aria-pressed="false">개인정보·데이터</button>
+          <button type="button" data-law-filter="security" aria-pressed="false">정보보호·통신</button>
+          <button type="button" data-law-filter="ai" aria-pressed="false">AI·디지털</button>
+        </div>
+        <p class="law-result-status" role="status" aria-live="polite"><strong data-law-count>10</strong>개의 주요 법령</p>
+        <div class="law-list" data-law-list>
+          
+          <article class="law-card" data-law-card data-category="privacy" data-search="개인정보 보호법 개인정보보호법 개보법 수집 이용 제공 파기 정보주체 처리자 유출 안전조치 개인정보의 처리 원칙과 정보주체의 권리, 개인정보처리자의 의무를 확인합니다.">
+            <a href="https://www.law.go.kr/법령/개인정보보호법" target="_blank" rel="noopener noreferrer" data-law-open data-law-name="개인정보 보호법">
+              <div class="law-card-code"><span>PIPA</span><small>법률</small></div>
+              <div class="law-card-body"><p>개인정보·데이터</p><h3>개인정보 보호법</h3><span>개인정보의 처리 원칙과 정보주체의 권리, 개인정보처리자의 의무를 확인합니다.</span></div>
+              <strong>화면에서 보기</strong>
+            </a>
+          </article>
+          
+          <article class="law-card" data-law-card data-category="privacy" data-search="개인정보 보호법 시행령 개인정보보호법시행령 개보법 시행령 가명정보 영향평가 유출통지 국외이전 안전조치 개인정보 보호법에서 위임한 처리 절차와 세부 기준을 확인합니다.">
+            <a href="https://www.law.go.kr/법령/개인정보보호법시행령" target="_blank" rel="noopener noreferrer" data-law-open data-law-name="개인정보 보호법 시행령">
+              <div class="law-card-code"><span>PIPA-R</span><small>대통령령</small></div>
+              <div class="law-card-body"><p>개인정보·데이터</p><h3>개인정보 보호법 시행령</h3><span>개인정보 보호법에서 위임한 처리 절차와 세부 기준을 확인합니다.</span></div>
+              <strong>화면에서 보기</strong>
+            </a>
+          </article>
+          
+          <article class="law-card" data-law-card data-category="privacy" data-search="개인정보의 안전성 확보조치 기준 안전성확보조치기준 안전조치 기준 내부관리계획 접근권한 접근통제 암호화 접속기록 백업 개인정보처리시스템에 필요한 관리적·기술적·물리적 보호조치의 최소 기준입니다.">
+            <a href="https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulNm=개인정보의%20안전성%20확보조치%20기준" target="_blank" rel="noopener noreferrer" data-law-open data-law-name="개인정보의 안전성 확보조치 기준">
+              <div class="law-card-code"><span>SAFE</span><small>고시</small></div>
+              <div class="law-card-body"><p>개인정보·데이터</p><h3>개인정보의 안전성 확보조치 기준</h3><span>개인정보처리시스템에 필요한 관리적·기술적·물리적 보호조치의 최소 기준입니다.</span></div>
+              <strong>화면에서 보기</strong>
+            </a>
+          </article>
+          
+          <article class="law-card" data-law-card data-category="security" data-search="정보통신망 이용촉진 및 정보보호 등에 관한 법률 정보통신망법 망법 침해사고 정보보호 최고책임자 CISO 정보통신서비스 정보통신망의 안정성과 침해사고 대응, 정보보호 책임 체계를 확인합니다.">
+            <a href="https://www.law.go.kr/법령/정보통신망이용촉진및정보보호등에관한법률" target="_blank" rel="noopener noreferrer" data-law-open data-law-name="정보통신망 이용촉진 및 정보보호 등에 관한 법률">
+              <div class="law-card-code"><span>NET</span><small>법률</small></div>
+              <div class="law-card-body"><p>정보보호·통신</p><h3>정보통신망 이용촉진 및 정보보호 등에 관한 법률</h3><span>정보통신망의 안정성과 침해사고 대응, 정보보호 책임 체계를 확인합니다.</span></div>
+              <strong>화면에서 보기</strong>
+            </a>
+          </article>
+          
+          <article class="law-card" data-law-card data-category="security" data-search="정보통신기반 보호법 정보통신기반보호법 기반보호법 주요정보통신기반시설 취약점 분석 평가 보호대책 주요정보통신기반시설의 지정, 취약점 분석·평가와 보호대책 기준을 확인합니다.">
+            <a href="https://www.law.go.kr/법령/정보통신기반보호법" target="_blank" rel="noopener noreferrer" data-law-open data-law-name="정보통신기반 보호법">
+              <div class="law-card-code"><span>CIIP</span><small>법률</small></div>
+              <div class="law-card-body"><p>정보보호·통신</p><h3>정보통신기반 보호법</h3><span>주요정보통신기반시설의 지정, 취약점 분석·평가와 보호대책 기준을 확인합니다.</span></div>
+              <strong>화면에서 보기</strong>
+            </a>
+          </article>
+          
+          <article class="law-card" data-law-card data-category="security" data-search="전자금융거래법 전자금융거래법 전금법 전자금융 보안 사고 책임 접근매체 금융회사 전자금융거래의 안전성과 이용자 보호, 사고 책임의 기본 구조를 확인합니다.">
+            <a href="https://www.law.go.kr/법령/전자금융거래법" target="_blank" rel="noopener noreferrer" data-law-open data-law-name="전자금융거래법">
+              <div class="law-card-code"><span>EFTA</span><small>법률</small></div>
+              <div class="law-card-body"><p>정보보호·통신</p><h3>전자금융거래법</h3><span>전자금융거래의 안전성과 이용자 보호, 사고 책임의 기본 구조를 확인합니다.</span></div>
+              <strong>화면에서 보기</strong>
+            </a>
+          </article>
+          
+          <article class="law-card" data-law-card data-category="privacy" data-search="신용정보의 이용 및 보호에 관한 법률 신용정보법 신정법 개인신용정보 마이데이터 신용정보회사 전송요구권 개인신용정보의 수집·이용·제공과 신용정보주체의 권리를 확인합니다.">
+            <a href="https://www.law.go.kr/법령/신용정보의이용및보호에관한법률" target="_blank" rel="noopener noreferrer" data-law-open data-law-name="신용정보의 이용 및 보호에 관한 법률">
+              <div class="law-card-code"><span>CREDIT</span><small>법률</small></div>
+              <div class="law-card-body"><p>개인정보·데이터</p><h3>신용정보의 이용 및 보호에 관한 법률</h3><span>개인신용정보의 수집·이용·제공과 신용정보주체의 권리를 확인합니다.</span></div>
+              <strong>화면에서 보기</strong>
+            </a>
+          </article>
+          
+          <article class="law-card" data-law-card data-category="ai" data-search="인공지능 발전과 신뢰 기반 조성 등에 관한 기본법 인공지능기본법 AI기본법 AI법 고영향 인공지능 생성형 인공지능 투명성 안전성 신뢰성 AI 산업 진흥과 고영향·생성형 인공지능의 투명성 및 안전 의무를 확인합니다.">
+            <a href="https://www.law.go.kr/법령/인공지능발전과신뢰기반조성등에관한기본법" target="_blank" rel="noopener noreferrer" data-law-open data-law-name="인공지능 발전과 신뢰 기반 조성 등에 관한 기본법">
+              <div class="law-card-code"><span>AI</span><small>법률</small></div>
+              <div class="law-card-body"><p>AI·디지털</p><h3>인공지능 발전과 신뢰 기반 조성 등에 관한 기본법</h3><span>AI 산업 진흥과 고영향·생성형 인공지능의 투명성 및 안전 의무를 확인합니다.</span></div>
+              <strong>화면에서 보기</strong>
+            </a>
+          </article>
+          
+          <article class="law-card" data-law-card data-category="ai" data-search="데이터 산업진흥 및 이용촉진에 관한 기본법 데이터산업법 데이터기본법 데이터 산업 거래 가치평가 품질 인증 데이터의 생산·거래·활용을 촉진하기 위한 산업 기반과 제도를 확인합니다.">
+            <a href="https://www.law.go.kr/법령/데이터산업진흥및이용촉진에관한기본법" target="_blank" rel="noopener noreferrer" data-law-open data-law-name="데이터 산업진흥 및 이용촉진에 관한 기본법">
+              <div class="law-card-code"><span>DATA</span><small>법률</small></div>
+              <div class="law-card-body"><p>AI·디지털</p><h3>데이터 산업진흥 및 이용촉진에 관한 기본법</h3><span>데이터의 생산·거래·활용을 촉진하기 위한 산업 기반과 제도를 확인합니다.</span></div>
+              <strong>화면에서 보기</strong>
+            </a>
+          </article>
+          
+          <article class="law-card" data-law-card data-category="privacy" data-search="위치정보의 보호 및 이용 등에 관한 법률 위치정보법 위정법 개인위치정보 위치기반서비스 사업자 동의 보호조치 개인위치정보의 수집·이용·제공과 위치정보사업자의 의무를 확인합니다.">
+            <a href="https://www.law.go.kr/법령/위치정보의보호및이용등에관한법률" target="_blank" rel="noopener noreferrer" data-law-open data-law-name="위치정보의 보호 및 이용 등에 관한 법률">
+              <div class="law-card-code"><span>LBS</span><small>법률</small></div>
+              <div class="law-card-body"><p>개인정보·데이터</p><h3>위치정보의 보호 및 이용 등에 관한 법률</h3><span>개인위치정보의 수집·이용·제공과 위치정보사업자의 의무를 확인합니다.</span></div>
+              <strong>화면에서 보기</strong>
+            </a>
+          </article>
+          
+        </div>
+        <div class="law-empty" data-law-empty hidden><p>일치하는 주요 법령이 없습니다.</p><span>통합 검색을 실행하면 전체 현행 법령에서 찾을 수 있습니다.</span></div>
+      </section>
+
+      <aside class="law-notice" aria-label="법령 검색 이용 안내">
+        <strong>확인 원칙</strong>
+        <p>표시 정보는 국가법령정보센터 공동활용 API를 기준으로 합니다. 업무상 최종 판단 전에는 연결된 공식 원문에서 시행일과 개정 상태를 다시 확인하세요.</p>
+      </aside>
+    </main>
+
+    <footer><p>사이버보안 · 개인정보보호 · 정보보호 거버넌스</p><p>© 2026 Prifoxy. All rights reserved.</p><p><a href="#privacy" data-privacy-open aria-haspopup="dialog" aria-controls="privacy">개인정보 처리 안내</a></p></footer>
+  <dialog id="privacy" class="privacy-dialog" aria-labelledby="privacy-title"><div class="privacy-dialog-heading"><div><span>PRIVACY</span><h2 id="privacy-title">개인정보 처리 안내</h2></div><button type="button" data-privacy-close aria-label="개인정보 처리 안내 닫기" autofocus>닫기 <span aria-hidden="true">×</span></button></div><div class="privacy-dialog-content"><p>조회수 조작과 자동화된 악용을 방지하기 위해 Cloudflare Turnstile을 사용합니다. 검증 과정에서 Cloudflare가 IP 주소와 브라우저·기기 신호 등을 처리할 수 있으며, <a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile 개인정보 부록</a>이 적용됩니다.</p>
+<p>블로그의 조회수 저장소에는 전체·오늘 조회수와 집계 날짜만 보관합니다. 문의는 <a href="mailto:ljkaa98@gmail.com">ljkaa98@gmail.com</a>으로 보내주세요.</p>
+<p>선택한 화면 모드는 브라우저에 저장되어 다음 방문에도 유지됩니다.</p>
+</div></dialog><noscript><section class="privacy-fallback"><h2>개인정보 처리 안내</h2><p>조회수 조작과 자동화된 악용을 방지하기 위해 Cloudflare Turnstile을 사용합니다. 검증 과정에서 Cloudflare가 IP 주소와 브라우저·기기 신호 등을 처리할 수 있으며, <a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile 개인정보 부록</a>이 적용됩니다.</p>
+<p>블로그의 조회수 저장소에는 전체·오늘 조회수와 집계 날짜만 보관합니다. 문의는 <a href="mailto:ljkaa98@gmail.com">ljkaa98@gmail.com</a>으로 보내주세요.</p>
+<p>선택한 화면 모드는 브라우저에 저장되어 다음 방문에도 유지됩니다.</p>
+</section></noscript>
+  </body>
+</html>
