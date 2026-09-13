@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://prifoxy.com/sitemap.xml
