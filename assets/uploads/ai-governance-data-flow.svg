@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="660" viewBox="0 0 960 660" role="img" aria-labelledby="title desc">
+  <title id="title">AI에 연결되는 정보와 권한</title>
+  <desc id="desc">질문과 사내 문서, 소스코드와 업무 데이터가 외부 AI 서비스 또는 자체 구축 AI에서 처리됩니다. 허용한 기능에 따라 답변과 코드가 생성되거나 업무 작업이 실행됩니다. 각 경로에서 접근 권한, 전송과 보관, 실행 권한과 승인을 확인합니다.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#49806a" stroke-width="1.8"/></marker></defs>
+  <rect width="960" height="660" rx="28" fill="#f5f5ef"/>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+    <text x="42" y="52" font-size="16" letter-spacing="2" fill="#62806e">AI SECURITY GOVERNANCE · 01</text>
+    <text x="42" y="107" font-size="38" font-weight="700" fill="#173e30">AI에 연결되는 정보와 권한</text>
+    <text x="42" y="146" font-size="21" fill="#566b60">입력부터 답변·실행까지, 정보가 이동하는 경로를 확인합니다.</text>
+    <rect x="40" y="190" width="258" height="216" rx="20" fill="#fff" stroke="#d8e2d9" stroke-width="2"/>
+    <rect x="352" y="190" width="256" height="216" rx="20" fill="#e4eee5" stroke="#8aae96" stroke-width="2"/>
+    <rect x="662" y="190" width="258" height="216" rx="20" fill="#fff" stroke="#d8e2d9" stroke-width="2"/>
+    <path d="M308 296 H338" fill="none" stroke="#49806a" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M618 296 H648" fill="none" stroke="#49806a" stroke-width="3" marker-end="url(#arrow)"/>
+    <g font-size="26" font-weight="700" fill="#244c39" text-anchor="middle"><text x="169" y="237">들어오는 정보</text><text x="480" y="237">AI 처리</text><text x="791" y="237">답변과 실행</text></g>
+    <g font-size="23" fill="#435f50" text-anchor="middle">
+      <text x="169" y="292">질문 · 첨부파일</text><text x="169" y="329">사내 문서 · 소스코드</text><text x="169" y="366">업무 시스템 데이터</text>
+      <text x="480" y="292">외부 AI 서비스</text><text x="480" y="328" font-size="18" fill="#728579">또는 / 함께</text><text x="480" y="366">자체 구축 AI</text>
+      <text x="791" y="292">답변 · 생성 코드</text><text x="791" y="329">문서 수정 · 메일 발송</text><text x="791" y="369" font-size="18" fill="#728579">허용한 기능에 따라 수행</text>
+    </g>
+    <g fill="#173e30"><rect x="40" y="440" width="880" height="152" rx="20"/></g>
+    <g font-size="23" font-weight="700" fill="#f2f6ec" text-anchor="middle"><text x="190" y="485">누가 읽는가?</text><text x="480" y="485">어디에 남는가?</text><text x="770" y="485">무엇을 하는가?</text></g>
+    <g font-size="20" fill="#d3e4d6" text-anchor="middle"><text x="190" y="525">사용자별 접근 권한</text><text x="190" y="554">검색 가능한 문서 범위</text><text x="480" y="525">전송 · 저장 · 운영 로그</text><text x="480" y="554">보관 기간 · 접근 주체</text><text x="770" y="525">도구별 실행 권한</text><text x="770" y="554">중요 작업의 승인</text></g>
+    <path d="M335 466 V565 M625 466 V565" stroke="#5c7b67"/>
+    <text x="480" y="628" text-anchor="middle" font-size="19" fill="#566b60">구축 방식과 업무 목적에 맞춰 각 경로의 통제를 확인합니다.</text>
+  </g>
+</svg>

@@ -1,0 +1,126 @@
+.article-content .article-image-link {
+  cursor: zoom-in;
+  text-decoration: none;
+}
+
+.article-content .article-image-link:focus-visible {
+  outline: none;
+}
+
+.article-content .article-image-link:focus-visible img {
+  outline: 3px solid var(--forest);
+  outline-offset: 4px;
+}
+
+html.article-image-is-open { overflow: hidden; }
+html.article-image-is-open > body {
+  position: fixed;
+  top: var(--article-image-page-top, 0);
+  left: var(--article-image-page-left, 0);
+  width: var(--article-image-page-width, 100%);
+  overflow: hidden;
+}
+
+.article-image-dialog {
+  width: min(1200px, calc(100% - 24px));
+  height: min(900px, calc(100vh - 24px));
+  height: min(900px, calc(100dvh - 24px));
+  max-width: none;
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 20px 70px rgb(0 0 0 / 22%);
+}
+
+.article-image-dialog[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.article-image-dialog::backdrop { background: var(--backdrop); }
+.article-image-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.article-image-title { margin: 0; color: var(--forest); font-size: 17px; line-height: 1.4; }
+.article-image-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; }
+.article-image-close, .article-image-toggle, .article-image-original {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--forest);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+}
+.article-image-close:hover, .article-image-toggle:hover, .article-image-original:hover { border-color: var(--forest); }
+.article-image-toggle:disabled { cursor: wait; opacity: .6; }
+.article-image-dialog :focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
+
+.article-image-viewport {
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-x pan-y pinch-zoom;
+  -webkit-overflow-scrolling: touch;
+}
+.article-image-viewport:focus-visible { outline-offset: -3px; }
+.article-image-can-pan { cursor: grab; }
+.article-image-is-panning { cursor: grabbing; }
+.article-image-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 16px;
+}
+.article-image-full {
+  display: block;
+  flex: none;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+}
+.article-image-full[hidden] { display: none; }
+.article-image-dialog[data-size="fit"] .article-image-stage { width: 100%; height: 100%; min-height: 0; }
+.article-image-dialog[data-size="fit"] .article-image-full { max-width: 100%; max-height: 100%; object-fit: contain; }
+.article-image-error { max-width: 36ch; margin: 0; color: var(--ink); font-size: 14px; line-height: 1.8; text-align: center; }
+.article-image-footer { padding: 10px 16px; border-top: 1px solid var(--line); }
+.article-image-status { margin: 0; color: var(--forest); font-size: 12px; line-height: 1.7; }
+.article-image-help { margin: 3px 0 0; color: var(--ink); font-size: 12px; line-height: 1.7; }
+
+@media (max-width: 480px) {
+  .article-image-header { gap: 8px; padding: 8px 12px; }
+  .article-image-footer { padding: 8px 12px; }
+  .article-image-stage { padding: 12px; }
+}
+
+@media (max-height: 480px) and (min-width: 600px) {
+  .article-image-header { grid-template-columns: auto minmax(0, 1fr) auto; padding: 8px 12px; }
+  .article-image-actions { grid-column: 2; grid-row: 1; justify-content: flex-end; }
+  .article-image-close { grid-column: 3; grid-row: 1; }
+  .article-image-footer { display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 6px 12px; }
+  .article-image-help { margin: 0; }
+}
