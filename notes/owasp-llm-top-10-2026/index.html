@@ -1,0 +1,124 @@
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; media-src 'self'; manifest-src 'self'; script-src 'self' https://challenges.cloudflare.com; connect-src https://laws-api.prifoxy.com; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#124a34">
+    <meta name="description" content="OWASP LLM Top 10 2026의 공식 분류를 기준으로 프롬프트 인젝션, 민감정보 노출, 과도한 권한 등 10가지 위험의 의미와 핵심 대응을 정리합니다.">
+    <link rel="canonical" href="https://prifoxy.com/notes/owasp-llm-top-10-2026/">
+    <meta property="og:site_name" content="Prifoxy">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="OWASP LLM Top 10 2026: 10가지 보안 위험과 핵심 대응">
+    <meta property="og:description" content="OWASP LLM Top 10 2026의 공식 분류를 기준으로 프롬프트 인젝션, 민감정보 노출, 과도한 권한 등 10가지 위험의 의미와 핵심 대응을 정리합니다.">
+    <meta property="og:url" content="https://prifoxy.com/notes/owasp-llm-top-10-2026/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OWASP LLM Top 10 2026: 10가지 보안 위험과 핵심 대응">
+    <meta name="twitter:description" content="OWASP LLM Top 10 2026의 공식 분류를 기준으로 프롬프트 인젝션, 민감정보 노출, 과도한 권한 등 10가지 위험의 의미와 핵심 대응을 정리합니다.">
+    
+    <meta property="og:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta name="twitter:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+    <meta name="twitter:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+
+    <title>OWASP LLM Top 10 2026: 10가지 보안 위험과 핵심 대응 | Prifoxy</title>
+    <script src="/assets/theme.js?v=a1fbe31f2050"></script>
+    <link rel="icon" href="/assets/favicon.svg?v=bdb9c835b634" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css?v=3323ee77cfee">
+  <link rel="stylesheet" href="/assets/mobile.css?v=a608549521de">
+    <script src="/assets/privacy.js?v=20260906" defer></script>
+  <link rel="stylesheet" href="/assets/article-media.css?v=c688d1cb4ab4">
+    <script src="/assets/article-media.js?v=f197b8ec14f3" defer></script>
+  <script src="/assets/pageviews.js?v=2aa0a6b6de25" defer></script>
+  </head>
+  <body>
+    
+    
+    <header class="site-header article-header">
+  <a class="wordmark" href="/" aria-label="Prifoxy 홈"><strong>Prifoxy</strong></a>
+  <nav aria-label="주요 메뉴">
+    <a href="/">Home</a>
+    <a href="/notes/" aria-current="page">Blog</a>
+    <a href="/projects/">Project</a>
+    <a href="/laws/">Laws</a>
+    <a href="/about/">About</a>
+  </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="다크 모드" aria-pressed="false" title="다크 모드로 전환" hidden>
+    <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.8 8.8 0 1 0 20.5 14.2Z"/></svg>
+    <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</header>
+
+    <main class="article-shell">
+      <aside class="article-rail"><p>글 정보</p><span>Tech</span><span>사이버보안</span><span>2026년 9월 20일</span><a href="/notes/">Blog로 돌아가기 →</a></aside>
+      <article class="prose">
+        <p class="library-kicker">사이버보안</p>
+        <h1>OWASP LLM Top 10 2026: 10가지 보안 위험과 핵심 대응</h1>
+        <p class="article-summary">OWASP LLM Top 10 2026의 공식 분류를 기준으로 프롬프트 인젝션, 민감정보 노출, 과도한 권한 등 10가지 위험의 의미와 핵심 대응을 정리합니다.</p>
+        <div class="article-meta"><span>2026년 9월 20일</span><span class="reading-time" data-nosnippet title="AI가 산정한 예상 읽기 시간: 약 16분" aria-label="예상 읽기 시간 약 16분"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6"></circle><path d="M8 4.5V8l2.5 1.5"></path></svg><span>16m</span></span></div>
+        <div class="article-content"><p>OWASP LLM Top 10은 대규모 언어모델을 사용하는 애플리케이션의 주요 보안 위험을 정리한 목록입니다. 모델의 답변뿐 아니라 학습 데이터, 검색 시스템, 연결 도구, 공급망과 출력 처리까지 포함합니다.</p>
+<p>이 글은 <a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/">OWASP 공식 2026판</a>을 기준으로 각 항목의 의미와 핵심 대응을 요약했습니다. 먼저 2025판에서 달라진 항목과 순위를 살펴보겠습니다.</p>
+<p><img src="/assets/uploads/owasp-llm-top10-2025-2026-rank-migration.png" alt="OWASP LLM Top 10의 2025→2026 순위 변화. Excessive Agency는 6→3위, Unbounded Consumption은 10→6위, Misinformation은 9→7위로 이동하고, System Prompt Leakage는 Hidden Context Exposure로 명칭·범위가 변경됐습니다."></p>
+<h2>LLM01:2026 · Prompt Injection</h2>
+<p><strong>프롬프트 인젝션</strong>은 입력에 포함된 지시가 모델의 동작을 서비스의 의도와 다르게 바꾸는 위험입니다. 사용자가 직접 입력하는 지시뿐 아니라 검색 문서·웹페이지·도구 응답·이미지 등에 숨긴 간접적인 지시도 포함합니다.</p>
+<p><strong>핵심 대응:</strong> 외부 데이터를 신뢰할 수 없는 입력으로 취급하고, 실행 가능한 도구와 권한을 제한합니다. 작업과 인자는 모델 외부에서 검증하며, 영향이 큰 작업에는 승인을 요구합니다. 시스템 프롬프트나 입력 필터만으로 완전한 차단을 보장할 수는 없습니다.</p>
+<h2>LLM02:2026 · Sensitive Information Disclosure</h2>
+<p><strong>민감정보 노출</strong>은 개인정보·기업 기밀·인증정보가 허용되지 않은 대상이나 경로로 드러나는 위험입니다. 최종 답변뿐 아니라 도구에 전달되는 값, 로그 등 중간 처리 경로에서도 발생할 수 있습니다.</p>
+<p><strong>핵심 대응:</strong> 모델에 전달하는 정보를 최소화하고 불필요한 민감정보를 제거합니다. 문서를 검색하기 전에 사용자의 접근 권한을 검사하며, 출력과 로그에도 보호 조치를 적용합니다. 화면의 답변만 가리는 것으로는 충분하지 않습니다.</p>
+<h2>LLM03:2026 · Excessive Agency</h2>
+<p><strong>과도한 기능·권한·자율성</strong>은 LLM에 업무상 필요한 범위보다 넓은 도구나 실행 권한을 부여해 잘못된 판단이 실제 피해로 이어지는 위험입니다. 공격으로 조작된 출력뿐 아니라 모델의 일반적인 오류도 문제가 될 수 있습니다.</p>
+<p><strong>핵심 대응:</strong> 필요한 도구만 제공하고, 실행 계정에 최소 권한을 부여합니다. 개별 작업은 요청한 사용자의 권한으로 다시 검사하며, 데이터 삭제·외부 전송 등 영향이 큰 작업에는 사람의 승인을 요구합니다.</p>
+<h2>LLM04:2026 · Supply Chain</h2>
+<p><strong>공급망 위험</strong>은 외부 모델·데이터셋·라이브러리·모델 확장 구성요소 등의 취약점이나 변조가 서비스에 유입되는 위험입니다. 구성요소를 내려받는 시점뿐 아니라 변환·업데이트·배포 과정도 관리 대상입니다.</p>
+<p><strong>핵심 대응:</strong> 공급자와 구성요소의 출처를 확인하고 버전·서명·해시·변경 이력을 관리합니다. 도입 전 취약점 검사와 모델 동작 평가를 함께 수행합니다. 파일의 무결성이 확인됐다는 사실이 모델의 안전성까지 보장하지는 않습니다.</p>
+<h2>LLM05:2026 · Data and Model Poisoning</h2>
+<p><strong>데이터·모델 오염</strong>은 데이터나 모델을 조작해 잘못된 판단, 편향 또는 특정 조건에서 작동하는 악성 동작이 지속되도록 만드는 위험입니다. 사전학습·미세조정 데이터뿐 아니라 검색에 계속 사용하는 저장 데이터도 포함합니다.</p>
+<p><strong>핵심 대응:</strong> 데이터의 출처와 변경 이력을 추적하고, 수집·수정 권한을 제한합니다. 배포 전후에 정상 동작과 의심스러운 조건에서의 동작을 평가하고, 오염된 데이터·모델을 격리하거나 이전 버전으로 복구할 수 있도록 관리합니다.</p>
+<h2>LLM06:2026 · Unbounded Consumption</h2>
+<p><strong>제한 없는 자원 소비</strong>는 추론·출력·도구 호출의 사용량이 통제되지 않아 비용 급증이나 서비스 중단으로 이어지는 위험입니다. 짧은 요청도 긴 추론과 반복 호출을 유발할 수 있으며, 대량 질의를 통한 모델 동작의 추출·복제도 다룹니다.</p>
+<p><strong>핵심 대응:</strong> 요청 횟수뿐 아니라 토큰·비용·실행 시간·호출 단계·재시도 횟수에 한도를 둡니다. 사용자별 할당량과 전체 예산을 관리하고, 한도 초과 시 경고에 그치지 않고 실제 실행을 중단해야 합니다.</p>
+<h2>LLM07:2026 · Misinformation</h2>
+<p><strong>잘못된 정보</strong>는 부정확하거나 근거가 부족한 출력을 신뢰해 잘못된 판단과 행동으로 이어지는 위험입니다. 사실을 만들어내는 환각뿐 아니라 오래된 정보, 중요한 조건의 누락, 수행하지 않은 작업의 완료 보고도 포함합니다.</p>
+<p><strong>핵심 대응:</strong> 신뢰할 수 있는 최신 자료로 답변을 검증하고, 제시한 출처가 실제 주장을 뒷받침하는지 확인합니다. 중요한 결정과 후속 실행 전에는 사람의 검토나 실제 시스템 상태 확인을 거칩니다. 검색 자료나 인용 링크가 있다는 이유만으로 정확성을 확정해서는 안 됩니다.</p>
+<h2>LLM08:2026 · Hidden Context Exposure</h2>
+<p><strong>숨겨진 컨텍스트 노출</strong>은 사용자에게 공개하지 않은 시스템·개발자 지시, 도구 명세, 내부 정책 등이 추출·추론되는 위험입니다. 노출된 내용이 권한 우회나 후속 공격에 얼마나 도움을 주는지에 따라 심각도가 달라집니다.</p>
+<p><strong>핵심 대응:</strong> 모델에 제공한 내부 맥락도 드러날 수 있다고 가정하고 비밀키·인증정보를 넣지 않습니다. 접근 권한과 중요 정책은 애플리케이션 코드에서 강제하며, 프롬프트를 숨기는 것에 보안을 의존하지 않습니다.</p>
+<h2>LLM09:2026 · Vector and Embedding Weaknesses</h2>
+<p><strong>벡터·임베딩 취약점</strong>은 데이터를 수치로 표현하고 유사도를 검색하는 구조를 악용해 검색 결과를 조작하거나 보호 정보를 추론하는 위험입니다. 벡터 기반 검색 증강 생성(RAG)과 메모리·캐시에서 발생할 수 있으며, 임베딩으로부터 원문을 복원하는 공격도 포함합니다.</p>
+<p><strong>핵심 대응:</strong> 검색 단계에서 사용자·조직별 접근 범위를 강제하고 문서와 색인의 출처·변경 이력을 관리합니다. 임베딩과 백업도 원문에 준하는 수준으로 보호합니다. 임베딩은 원문을 안전하게 익명화한 결과물로 볼 수 없습니다.</p>
+<h2>LLM10:2026 · Improper Output Handling</h2>
+<p><strong>부적절한 출력 처리</strong>는 LLM의 출력을 충분히 검증하지 않고 웹페이지·데이터베이스·명령 실행 등에 전달하는 위험입니다. 이로 인해 스크립트 실행, SQL 인젝션, 명령 실행 등이 발생할 수 있으며, 생성한 취약 코드를 검토 없이 반영하는 문제도 포함합니다.</p>
+<p><strong>핵심 대응:</strong> 출력의 구조와 값을 검증하고, 사용 위치에 맞게 인코딩·정제합니다. SQL은 매개변수화하고 실행 가능한 명령과 인자를 제한하며, 생성 코드는 실행·배포 전에 검토합니다. 출력 형식이 맞는지 확인하는 것만으로 안전성이 확보되지는 않습니다.</p>
+<h2>적용할 때 구분할 점</h2>
+<p>항목은 서로 배타적이지 않습니다. 공급망을 통해 오염된 모델이 들어오는 경우처럼 한 사건에 여러 위험이 연결될 수 있습니다. 서비스가 처리하는 데이터와 실행 권한을 기준으로 영향과 대응 우선순위를 정해야 합니다.</p>
+<p>특히 <strong>LLM07은 출력의 사실성과 신뢰성</strong>, <strong>LLM10은 출력을 후속 시스템에서 처리하는 방식</strong>에 초점을 둡니다. 모델이 도구를 호출하고 여러 단계의 업무를 수행한다면 OWASP Agentic Top 10도 함께 검토할 필요가 있습니다.</p>
+<p>한국어로 더 읽기: <a href="https://genai.owasp.org/download/48837/?tmstv=1752511307">2025판 공식 한국어 번역 PDF</a>. 항목 번호와 일부 내용은 이 글의 기준인 2026판과 다릅니다.</p>
+</div>
+      </article>
+    </main>
+    <footer><p>사이버보안 · 개인정보보호 · 정보보호 거버넌스</p><p>© 2026 Prifoxy. All rights reserved.</p><p><a href="#privacy" data-privacy-open aria-haspopup="dialog" aria-controls="privacy">개인정보 처리방침</a></p></footer>
+  <dialog id="privacy" class="privacy-dialog" aria-labelledby="privacy-title"><div class="privacy-dialog-heading" data-nosnippet><div><span>PRIVACY</span><h2 id="privacy-title">개인정보 처리방침</h2></div><button type="button" data-privacy-close aria-label="개인정보 처리방침 닫기" autofocus>닫기 <span aria-hidden="true">×</span></button></div><div class="privacy-dialog-content" data-nosnippet><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</div></dialog><noscript><section class="privacy-fallback" data-nosnippet><h2>개인정보 처리방침</h2><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</section></noscript>
+  </body>
+</html>
+

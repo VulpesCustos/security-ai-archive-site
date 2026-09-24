@@ -1,0 +1,123 @@
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; media-src 'self'; manifest-src 'self'; script-src 'self' https://challenges.cloudflare.com; connect-src https://laws-api.prifoxy.com; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#124a34">
+    <meta name="description" content="OWASP Agentic Top 10 2026의 공식 분류를 기준으로 목표 탈취, 도구 오용, 권한 악용 등 AI 에이전트의 10가지 위험과 핵심 대응을 정리합니다.">
+    <link rel="canonical" href="https://prifoxy.com/notes/owasp-agentic-top-10-2026/">
+    <meta property="og:site_name" content="Prifoxy">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="OWASP Agentic Top 10 2026: 10가지 보안 위험과 핵심 대응">
+    <meta property="og:description" content="OWASP Agentic Top 10 2026의 공식 분류를 기준으로 목표 탈취, 도구 오용, 권한 악용 등 AI 에이전트의 10가지 위험과 핵심 대응을 정리합니다.">
+    <meta property="og:url" content="https://prifoxy.com/notes/owasp-agentic-top-10-2026/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OWASP Agentic Top 10 2026: 10가지 보안 위험과 핵심 대응">
+    <meta name="twitter:description" content="OWASP Agentic Top 10 2026의 공식 분류를 기준으로 목표 탈취, 도구 오용, 권한 악용 등 AI 에이전트의 10가지 위험과 핵심 대응을 정리합니다.">
+    
+    <meta property="og:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta name="twitter:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+    <meta name="twitter:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+
+    <title>OWASP Agentic Top 10 2026: 10가지 보안 위험과 핵심 대응 | Prifoxy</title>
+    <script src="/assets/theme.js?v=a1fbe31f2050"></script>
+    <link rel="icon" href="/assets/favicon.svg?v=bdb9c835b634" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css?v=3323ee77cfee">
+  <link rel="stylesheet" href="/assets/mobile.css?v=a608549521de">
+    <script src="/assets/privacy.js?v=20260906" defer></script>
+  <link rel="stylesheet" href="/assets/article-media.css?v=c688d1cb4ab4">
+    <script src="/assets/article-media.js?v=f197b8ec14f3" defer></script>
+  <script src="/assets/pageviews.js?v=2aa0a6b6de25" defer></script>
+  </head>
+  <body>
+    
+    
+    <header class="site-header article-header">
+  <a class="wordmark" href="/" aria-label="Prifoxy 홈"><strong>Prifoxy</strong></a>
+  <nav aria-label="주요 메뉴">
+    <a href="/">Home</a>
+    <a href="/notes/" aria-current="page">Blog</a>
+    <a href="/projects/">Project</a>
+    <a href="/laws/">Laws</a>
+    <a href="/about/">About</a>
+  </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="다크 모드" aria-pressed="false" title="다크 모드로 전환" hidden>
+    <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.8 8.8 0 1 0 20.5 14.2Z"/></svg>
+    <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</header>
+
+    <main class="article-shell">
+      <aside class="article-rail"><p>글 정보</p><span>Tech</span><span>사이버보안</span><span>2026년 9월 20일</span><a href="/notes/">Blog로 돌아가기 →</a></aside>
+      <article class="prose">
+        <p class="library-kicker">사이버보안</p>
+        <h1>OWASP Agentic Top 10 2026: 10가지 보안 위험과 핵심 대응</h1>
+        <p class="article-summary">OWASP Agentic Top 10 2026의 공식 분류를 기준으로 목표 탈취, 도구 오용, 권한 악용 등 AI 에이전트의 10가지 위험과 핵심 대응을 정리합니다.</p>
+        <div class="article-meta"><span>2026년 9월 20일</span><span class="reading-time" data-nosnippet title="AI가 산정한 예상 읽기 시간: 약 10분" aria-label="예상 읽기 시간 약 10분"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6"></circle><path d="M8 4.5V8l2.5 1.5"></path></svg><span>10m</span></span></div>
+        <div class="article-content"><p>AI 에이전트는 주어진 목표를 바탕으로 작업을 선택하고, 도구를 사용하며 여러 단계의 실행을 이어가는 시스템입니다. 일부 단계에 사람의 승인이 있더라도 목표, 권한, 기억과 협업 과정에서 보안 위험이 발생할 수 있습니다.</p>
+<p>OWASP Agentic Top 10은 이러한 에이전트 애플리케이션의 주요 보안 위험을 정리한 목록입니다. 이 글은 2025년 12월 공개된 2026판을 기준으로 각 항목의 의미와 핵심 대응을 요약했습니다. <a href="/notes/owasp-llm-top-10-2026/">LLM Top 10</a>을 보완하며, 자율적인 작업 수행과 도구 실행, 권한 위임에서 발생하는 위험에 초점을 둡니다.</p>
+<p><img src="/assets/uploads/owasp-agentic-top10-2026-overview.png" alt="OWASP Agentic Top 10 2026의 10가지 위험: 목표 탈취, 도구 오용, 신원과 권한 악용, 공급망 취약점, 예상하지 못한 코드 실행, 메모리와 컨텍스트 오염, 안전하지 않은 에이전트 간 통신, 연쇄 실패, 사람과 에이전트 사이의 신뢰 악용, 목적과 통제를 벗어난 에이전트."></p>
+<h2>ASI01 · Agent Goal Hijack</h2>
+<p><strong>에이전트 목표 탈취</strong>는 공격자가 문서, 도구 응답, 외부 데이터 등에 지시를 심어 에이전트의 목표나 의사결정을 바꾸는 위험입니다. 조작된 입력은 이후 계획과 여러 단계의 작업 수행에도 영향을 줄 수 있습니다.</p>
+<p><strong>핵심 대응:</strong> 외부 콘텐츠를 신뢰할 수 없는 데이터로 취급하고, 실행할 작업이 원래 요청의 목적과 범위에 맞는지 모델 외부에서 검증합니다. 도구 권한을 제한하며, 목표 변경이나 영향이 큰 작업에는 별도의 검증·승인을 적용합니다.</p>
+<h2>ASI02 · Tool Misuse and Exploitation</h2>
+<p><strong>도구 오용과 악용</strong>은 에이전트가 정상적인 도구를 허가된 권한 안에서 위험하거나 의도하지 않은 방식으로 사용하는 문제입니다. 불필요한 삭제, 과도한 API 호출, 내부 조회와 외부 전송 도구를 연결한 정보 유출 등이 포함됩니다.</p>
+<p><strong>핵심 대응:</strong> 도구별 기능, 접근 가능한 데이터, 호출량과 외부 전송 대상을 제한합니다. 실행 직전에 호출 목적과 인자를 검증하고, 삭제·송금·게시 등 영향이 큰 작업에는 변경 내용의 미리보기와 승인을 적용합니다.</p>
+<h2>ASI03 · Identity and Privilege Abuse</h2>
+<p><strong>신원과 권한 악용</strong>은 에이전트의 인증정보나 신뢰·위임 관계를 악용해 허용되지 않은 접근과 작업을 수행하는 위험입니다. 상위 에이전트의 권한을 그대로 넘기거나 다른 사용자·작업의 인증정보를 재사용하는 구조가 원인이 될 수 있습니다.</p>
+<p><strong>핵심 대응:</strong> 에이전트별 신원을 구분하고 작업 범위와 유효기간이 제한된 인증정보를 사용합니다. 위임과 중요 동작마다 원래 사용자의 권한과 위임 범위를 다시 확인하며, 사용자·세션 간 인증정보를 분리합니다.</p>
+<h2>ASI04 · Agentic Supply Chain Vulnerabilities</h2>
+<p><strong>에이전트 공급망 취약점</strong>은 외부 도구, 플러그인, 모델, 프롬프트, 다른 에이전트 등 공급받는 구성요소가 악성·취약하거나 변조되어 실행 과정에 유입되는 위험입니다. 설치된 패키지뿐 아니라 실행 중 발견하고 연결하는 도구와 서비스도 관리 대상입니다.</p>
+<p><strong>핵심 대응:</strong> 구성요소의 출처와 무결성을 확인하고 허용 목록, 버전 고정과 변경 검토를 적용합니다. 실행 중 구성 변경도 추적하며, 침해된 도구나 연결을 신속히 차단할 수 있도록 관리합니다.</p>
+<h2>ASI05 · Unexpected Code Execution (RCE)</h2>
+<p><strong>예상하지 못한 코드 실행</strong>은 생성된 코드나 신뢰할 수 없는 입력이 충분한 검증 없이 실행되어 시스템을 침해하는 위험입니다. 셸 명령, 동적 코드 평가, 안전하지 않은 역직렬화와 템플릿 처리 등이 포함되며 원격 실행에만 한정되지 않습니다.</p>
+<p><strong>핵심 대응:</strong> 코드 생성과 실행 사이에 검증 단계를 두고, 운영 환경의 직접 실행과 위험한 동적 평가를 제한합니다. 비관리자 권한의 격리 환경에서 파일·네트워크 접근을 제한하고 실행 내역을 기록합니다.</p>
+<h2>ASI06 · Memory &amp; Context Poisoning</h2>
+<p><strong>메모리와 컨텍스트 오염</strong>은 저장·재사용되는 기억과 검색 문맥이 악성 데이터로 오염되는 위험입니다. 조작된 내용이 후속 판단과 도구 사용에 지속적으로 영향을 주며, 세션이나 에이전트 사이로 전파될 수 있습니다.</p>
+<p><strong>핵심 대응:</strong> 기억에 저장할 내용과 출처를 검증하고 사용자·업무별 기억을 분리합니다. 변경 이력을 관리하며, 오염된 항목을 격리·삭제하거나 신뢰할 수 있는 상태로 복구할 수 있도록 준비합니다.</p>
+<h2>ASI07 · Insecure Inter-Agent Communication</h2>
+<p><strong>안전하지 않은 에이전트 간 통신</strong>은 메시지의 인증·무결성·검증이 부족해 협업 과정이 조작되는 위험입니다. 발신자 위조, 메시지 변조, 과거 메시지의 재전송 등이 잘못된 위임과 실행으로 이어질 수 있습니다.</p>
+<p><strong>핵심 대응:</strong> 상호 인증, 암호화와 메시지 무결성 검증을 적용합니다. 발신자의 권한, 메시지의 대상·업무 맥락·유효시간을 확인하고, 같은 요청이 반복 실행되지 않도록 중복과 재전송을 통제합니다.</p>
+<h2>ASI08 · Cascading Failures</h2>
+<p><strong>연쇄 실패</strong>는 한 에이전트의 오류나 침해가 다른 에이전트와 연결된 업무로 전파·증폭되는 위험입니다. 잘못된 결과의 재사용, 반복 위임과 재시도 등이 결합하면 시스템 전체의 장애나 대규모 상태 변경으로 이어질 수 있습니다.</p>
+<p><strong>핵심 대응:</strong> 에이전트와 업무 간 실행 경계를 분리하고, 후속 작업에 전달할 결과를 검증합니다. 호출·재시도 횟수와 자원 사용량에 한도를 두며, 이상 시 자동 중단·격리하고 관련 작업을 추적·복구할 수 있도록 설계합니다.</p>
+<h2>ASI09 · Human-Agent Trust Exploitation</h2>
+<p><strong>사람과 에이전트 사이의 신뢰 악용</strong>은 에이전트에 대한 사람의 신뢰와 과도한 의존이 잘못된 판단이나 승인에 이용되는 위험입니다. 자신감 있는 설명이나 조작된 근거가 위험한 권고를 신뢰하게 만들 수 있습니다.</p>
+<p><strong>핵심 대응:</strong> 실제 출처, 변경 대상과 영향을 검토자에게 보여주고 영향이 큰 작업은 독립적으로 확인합니다. 미리보기와 실행을 분리하고, 승인한 대상·내용과 실제 실행이 일치하도록 검증하며 승인 이력을 기록합니다.</p>
+<h2>ASI10 · Rogue Agents</h2>
+<p><strong>목적과 통제를 벗어난 에이전트</strong>는 에이전트가 의도된 기능과 허용 범위를 이탈해 유해하게 행동하는 위험입니다. 외부 조작이나 잘못된 목표 설정 등이 시작점이 될 수 있으며, 개별 입력보다 이후 지속되는 행동 이탈과 통제 상실에 초점을 둡니다.</p>
+<p><strong>핵심 대응:</strong> 허용된 목표·행동과 실제 수행 내역을 지속적으로 비교합니다. 이상이 발견되면 에이전트를 격리하고 권한 회수·실행 중단을 적용하며, 위임된 작업과 대기 작업까지 확인한 뒤 검증된 상태로 복구합니다.</p>
+<h2>적용할 때 구분할 점</h2>
+<p><strong>ASI02는 부여된 권한 안에서의 도구 오용</strong>, <strong>ASI03은 신원과 위임 관계를 악용한 권한 경계 침해</strong>에 초점을 둡니다. 한 사건에 목표 탈취, 기억 오염, 연쇄 실패가 함께 나타날 수 있으므로 항목을 서로 배타적인 분류로 볼 필요는 없습니다.</p>
+<p>공통 원칙은 업무에 필요한 수준으로 자율성을 제한하는 <strong>최소 자율성</strong>(Least Agency)과 실행 과정을 추적할 수 있는 기록입니다. 요청한 목표, 권한 판단, 도구 호출, 승인과 실제 시스템 변경을 연결해 확인하고, 이상 시 실행을 중단·복구할 수 있어야 합니다.</p>
+</div>
+      </article>
+    </main>
+    <footer><p>사이버보안 · 개인정보보호 · 정보보호 거버넌스</p><p>© 2026 Prifoxy. All rights reserved.</p><p><a href="#privacy" data-privacy-open aria-haspopup="dialog" aria-controls="privacy">개인정보 처리방침</a></p></footer>
+  <dialog id="privacy" class="privacy-dialog" aria-labelledby="privacy-title"><div class="privacy-dialog-heading" data-nosnippet><div><span>PRIVACY</span><h2 id="privacy-title">개인정보 처리방침</h2></div><button type="button" data-privacy-close aria-label="개인정보 처리방침 닫기" autofocus>닫기 <span aria-hidden="true">×</span></button></div><div class="privacy-dialog-content" data-nosnippet><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</div></dialog><noscript><section class="privacy-fallback" data-nosnippet><h2>개인정보 처리방침</h2><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</section></noscript>
+  </body>
+</html>
+
