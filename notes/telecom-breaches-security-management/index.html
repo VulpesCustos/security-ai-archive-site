@@ -1,0 +1,228 @@
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; media-src 'self'; manifest-src 'self'; script-src 'self' https://challenges.cloudflare.com; connect-src https://laws-api.prifoxy.com; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#124a34">
+    <meta name="description" content="SKT·KT·LG유플러스의 서로 다른 사고를 통해 망 연결, 자산, 접근권한, 보안 솔루션 운영과 CISO의 책임 범위를 점검합니다.">
+    <link rel="canonical" href="https://prifoxy.com/notes/telecom-breaches-security-management/">
+    <meta property="og:site_name" content="Prifoxy">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="통신 3사 침해사고로 돌아보는 정보보호 관리와 정책">
+    <meta property="og:description" content="SKT·KT·LG유플러스의 서로 다른 사고를 통해 망 연결, 자산, 접근권한, 보안 솔루션 운영과 CISO의 책임 범위를 점검합니다.">
+    <meta property="og:url" content="https://prifoxy.com/notes/telecom-breaches-security-management/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="통신 3사 침해사고로 돌아보는 정보보호 관리와 정책">
+    <meta name="twitter:description" content="SKT·KT·LG유플러스의 서로 다른 사고를 통해 망 연결, 자산, 접근권한, 보안 솔루션 운영과 CISO의 책임 범위를 점검합니다.">
+    
+    <meta property="og:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta name="twitter:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+    <meta name="twitter:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+
+    <title>통신 3사 침해사고로 돌아보는 정보보호 관리와 정책 | Prifoxy</title>
+    <script src="/assets/theme.js?v=a1fbe31f2050"></script>
+    <link rel="icon" href="/assets/favicon.svg?v=bdb9c835b634" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css?v=44d70f1eca4a">
+  <link rel="stylesheet" href="/assets/mobile.css?v=a608549521de">
+    <script src="/assets/privacy.js?v=20260906" defer></script>
+  <link rel="stylesheet" href="/assets/article-media.css?v=c688d1cb4ab4">
+    <script src="/assets/article-media.js?v=f197b8ec14f3" defer></script>
+  <script src="/assets/pageviews.js?v=2aa0a6b6de25" defer></script>
+  </head>
+  <body>
+    
+    
+    <header class="site-header article-header">
+  <a class="wordmark" href="/" aria-label="Prifoxy 홈"><strong>Prifoxy</strong></a>
+  <nav aria-label="주요 메뉴">
+    <a href="/">Home</a>
+    <a href="/notes/" aria-current="page">Blog</a>
+    <a href="/projects/">Project</a>
+    <a href="/laws/">Laws</a>
+    <a href="/about/">About</a>
+  </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="다크 모드" aria-pressed="false" title="다크 모드로 전환" hidden>
+    <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.8 8.8 0 1 0 20.5 14.2Z"/></svg>
+    <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</header>
+
+    <main class="article-shell">
+      <aside class="article-rail"><p>글 정보</p><span>GRC</span><span>정보보호 거버넌스</span><span>2026년 9월 29일</span><a href="/notes/">Blog로 돌아가기 →</a></aside>
+      <article class="prose">
+        <p class="library-kicker">정보보호 거버넌스</p>
+        <h1>통신 3사 침해사고로 돌아보는 정보보호 관리와 정책</h1>
+        <p class="article-summary">SKT·KT·LG유플러스의 서로 다른 사고를 통해 망 연결, 자산, 접근권한, 보안 솔루션 운영과 CISO의 책임 범위를 점검합니다.</p>
+        <div class="article-meta"><span>2026년 9월 29일</span><span class="reading-time" data-nosnippet title="AI가 산정한 예상 읽기 시간: 약 16분" aria-label="예상 읽기 시간 약 16분"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6"></circle><path d="M8 4.5V8l2.5 1.5"></path></svg><span>16m</span></span></div>
+        <div class="article-content"><p>보안 점검을 하다 보면 익숙한 답변을 듣습니다. 망을 분리했고, 접근제어 솔루션을 도입했고, 내부 정책도 있다는 설명입니다. 그다음에는 조금 더 구체적인 질문이 필요합니다. <strong>분리한 망 사이에는 어떤 통신이 허용돼 있는지, 솔루션에 빠진 자산은 없는지, 정책을 지키는지 누가 확인하는지</strong>까지 살펴봐야 합니다.</p>
+<p>정보보호 정책은 조직이 지켜야 할 기준을 정하는 일입니다. <strong>정보보호 관리는 그 기준에 담당자와 절차, 점검과 개선을 연결해 실제로 작동하게 하는 일</strong>입니다. “접근권한을 최소화한다”는 문장이 정책이라면, 업무가 바뀐 직원의 권한을 회수하고 그 결과를 확인하는 과정이 <strong>관리</strong>에 해당합니다.</p>
+<p>이 글에서는 2025년에 드러난 SKT·KT·LG유플러스의 사고와 2026년 후속 발표를 바탕으로, 자신의 조직에서 확인할 문제를 정리해보겠습니다. <strong>사고 사실은 공개된 정부 조사 결과를 기준으로 설명하고, 조직에 적용할 점검 방법은 이를 바탕으로 설명합니다.</strong></p>
+<h2>세 회사의 사고는 구분해서 봐야 합니다</h2>
+<p>먼저 사고를 구분할 필요가 있습니다. SKT의 유심정보 유출, KT의 불법 펨토셀 사건, LG유플러스의 APPM 관련 정보 유출은 같은 공격의 반복이 아닙니다. KT에서는 펨토셀 사건과 별도로 서버 악성코드 감염도 조사됐습니다.</p>
+<div class="article-table-block article-table-block--wide">
+<p class="table-scroll-hint">표는 좌우로 움직여 볼 수 있습니다.</p>
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>이 글에서 살펴볼 요점</th>
+<th>관리 관점에서 던질 질문</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SKT</td>
+<td>내부 서버 침해와 유심정보 유출</td>
+<td>망 사이의 연결과 계정정보를 함께 통제했는가?</td>
+</tr>
+<tr>
+<td>KT</td>
+<td>불법 펨토셀을 통한 정보 탈취·무단 소액결제, 별도 서버 감염</td>
+<td>실제 접속하는 장비와 등록된 자산이 일치하는가?</td>
+</tr>
+<tr>
+<td>LG유플러스</td>
+<td>APPM 관련 서버·계정·임직원 정보 유출</td>
+<td>보안 관리 시스템 자체와 사고 증거를 보호했는가?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h2>1. SKT — 망을 나눴다면, 망 사이의 통로도 확인해야 합니다</h2>
+<p>과기정통부의 2025년 7월 조사 발표에 따르면, 인터넷 연결 접점이 있는 관리망 서버에서 2021년 악성코드 설치 흔적이 확인됐습니다. 공격자는 서버에 평문으로 저장된 계정정보를 이용해 이동했고, HSS 관리서버와 HSS에 BPFDoor를 설치했습니다. HSS는 가입자의 이동통신망 접속을 인증하는 핵심 시스템이고, BPFDoor는 공격자가 서버를 원격 조종하는 데 사용하는 백도어입니다. 2025년 4월에는 HSS의 유심정보가 인터넷에 연결된 다른 서버를 거쳐 외부로 빠져나갔습니다.</p>
+<p>이후 개인정보위원회는 인터넷에서 내부 관리망으로의 접근 제한이 미흡했고, 관리망과 HSS 사이에 불필요한 접속이 허용됐다고 지적했습니다. 계정정보를 보호하지 않은 문제, 보안 패치 미적용, 유심 인증키의 평문 저장도 확인했습니다. <a href="https://pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&amp;mCode=C020010000&amp;nttId=11453">개인정보위 SKT 조사 결과, 2025.8.28</a></p>
+<p>이 사례에서 살펴볼 부분은 <strong>한 서버에 생긴 문제가 다른 망의 핵심 시스템까지 이어질 수 있었던 조건</strong>입니다. 공격자가 계정을 얻더라도 접속 경로가 제한돼 있다면 이동을 막을 기회가 생깁니다. 반대로 네트워크 접근이 가능하고 사용할 수 있는 계정까지 확보되면, 내부 시스템을 차례로 공격하기 쉬워집니다.</p>
+<h3>‘물리적으로 분리했다’는 설명 다음에 할 일</h3>
+<p>물리적 망 분리는 중요한 보호 수단입니다. 다만 실제 운영에는 자료 전송, 유지보수, 백업, 모니터링을 위한 연결이 생깁니다. 이 연결의 범위와 권한이 관리돼야 분리의 효과를 유지할 수 있습니다.</p>
+<p><img src="/assets/uploads/telecom-breaches-security-management-network-passage.webp" alt="담당자가 업무 공간과 서버실 사이의 연결 통로를 살피며, 승인된 연결과 재검토가 필요한 연결을 점검표와 대조하는 개념 삽화"></p>
+<p><em>그림 1. 망을 나눈 뒤에도, 망 사이에 남아 있는 연결의 목적과 허용 범위를 확인해야 합니다.</em></p>
+<p>조직의 내부망과 서비스 외부망을 예로 들어보겠습니다. 원래 특정 관리서버만 접속하도록 설계했어도, 장애 대응을 위해 추가한 방화벽 허용 규칙이 계속 남아 있을 수 있습니다. 구성도에는 분리된 망으로 표시돼 있지만, 실제 설정에는 넓은 연결이 남는 상황입니다.</p>
+<p>따라서 점검할 때는 구성도와 실제 방화벽 정책, 라우팅, 접속 기록을 함께 비교해야 합니다. 각 연결에는 <strong>업무 목적, 허용 대상, 승인자, 재검토 시점</strong>이 있어야 합니다. 임시 연결은 종료 조건을 정하고, 승인된 시험 범위에서 일반 업무용 단말이나 불필요한 서버가 핵심 시스템에 접근하지 못하는지 확인할 수 있습니다.</p>
+<p><img src="/assets/uploads/telecom-breaches-security-management-network-bypass.webp" alt="업무망과 서버망 모형 사이에 승인된 녹색 연결과 별도로 이어진 주황색 연결이 있어, 통제 밖의 경로까지 확인해야 함을 보여주는 개념 삽화"></p>
+<p><em>그림 2. 승인된 통로뿐 아니라 통제를 우회하는 연결도 살펴보고, 불필요한 접근 경로를 정리해야 합니다.</em></p>
+<h2>2. KT — 자산 목록에 없는 장비가 망에 들어온다면</h2>
+<p>펨토셀은 건물 안처럼 통신 신호가 약한 곳을 보완하는 소형 기지국입니다. 작은 장비지만 이용자의 단말과 통신사 내부망을 연결합니다.</p>
+<p>2026년 7월 개인정보위원회 발표에 따르면, 공격자는 유실된 KT 펨토셀의 인증서를 복사해 자체 제작 장비에 넣고 내부망에 접속했습니다. 이용자의 통신과 결제 인증코드를 가로채 별도로 확보한 개인정보와 결합해 무단 소액결제를 실행했습니다. 조사에서는 접속 IP 제한과 장비 식별자(Cell ID) 관리 미흡, 관리서버를 우회하는 접속 경로가 확인됐습니다. <a href="https://pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&amp;mCode=B030020000&amp;nttId=12349">개인정보위 KT 조사 결과, 2026.7.30</a></p>
+<p>과기정통부는 불법 펨토셀로 통신 암호화를 해제할 수 있었던 문제도 확인했습니다. 이는 해당 공격 경로에서 확인한 문제이며, 모든 KT 통신이 항상 평문이었다는 뜻은 아닙니다. <a href="https://www.korea.kr/news/policyNewsView.do?newsId=156737260">과기정통부 KT·LG유플러스 조사 브리핑, 2025.12.29</a></p>
+<p>관리 관점에서는 장비 인증서를 ‘출입증’에 비유해볼 수 있습니다. 출입증을 제시했다는 사실과, 지금 들어오는 장비가 회사에서 승인한 바로 그 장비라는 사실은 함께 확인해야 합니다. 장비를 잃어버렸는데 그 안의 인증정보가 계속 유효하다면, 물건의 분실이 시스템 접근 문제로 이어질 수 있습니다.</p>
+<h3>‘유령 자산’은 목록과 현실이 어긋나는 곳에서 생깁니다</h3>
+<p>과기정통부는 KT의 자산 이력이 체계적으로 관리되지 않았고, 시스템에 등록된 자산과 실물 정보도 일치하지 않았다고 발표했습니다. 자산관리 문제는 이 사건에서 실제로 확인된 사항입니다. <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148957231">과기정통부 조사 결과, 2025.12.29</a></p>
+<p>여기서 ‘유령 자산’은 공식적인 사고 분류가 아니라, <strong>존재하거나 접속하고 있는데 관리 체계가 제대로 설명하지 못하는 자산</strong>을 가리키는 표현으로 사용하겠습니다. 테스트 후 남겨둔 서버, 담당자가 바뀐 장비, 사용을 끝냈지만 인증서가 살아 있는 단말도 점검 대상이 될 수 있습니다.</p>
+<p><img src="/assets/uploads/telecom-breaches-security-management-ghost-assets.webp" alt="담당자가 서버 3대만 기록된 자산 목록과 실제 운영 중인 서버 4대를 대조하는 모습. 오른쪽에는 목록에서 빠진 서버 한 대가 작동하고 있습니다."></p>
+<p><em>그림 3. 자산 목록에는 3대, 실제 운영 중인 서버는 4대. 기록에서 빠진 자산은 보안 관리에서도 누락될 수 있습니다.</em></p>
+<p>자산 목록에는 이름과 구매일 외에도 실제 위치, 운영 담당자, 용도, 연결되는 망, 사용하는 계정·인증서, 운영 상태가 연결돼야 합니다. 특히 신규 도입뿐 아니라 이동·교체·유실·반납·폐기 때 무엇을 바꿔야 하는지 정해야 합니다.</p>
+<p>예를 들어 원격 유지보수 장비를 폐기한다면 장비 반납 확인과 함께 인증서 폐기, 계정 회수, 방화벽 허용 규칙 정리까지 완료돼야 합니다. 실제로 접속하는 장비 목록과 자산관리대장을 비교하고, 어느 한쪽에만 있는 장비는 담당자가 확인하도록 절차를 만들 수 있습니다. 통신사뿐 아니라 VPN 장비, 무선 AP, 클라우드 서버를 운영하는 회사에도 적용할 수 있는 점검입니다.</p>
+<h2>3. LG유플러스 — 접근을 관리하는 시스템도 보호 대상입니다</h2>
+<p>LG유플러스의 APPM은 서버 접근과 계정·비밀번호를 관리하는 시스템입니다. 과기정통부는 2025년 12월 APPM 관련 서버 목록, 서버 계정정보, 임직원 성명 등이 실제 유출됐다고 발표했습니다. <a href="https://www.korea.kr/news/policyNewsView.do?newsId=156737260">과기정통부 최종 조사 브리핑, 2025.12.29</a></p>
+<p>개인정보위원회도 2026년 7월 유출된 이름·계정 등이 APPM에서 관리하던 임직원·협력사 직원 정보임을 확인했습니다. 다만 관련 서버의 운영체제 재설치·폐기로 정확한 유출 경위와 추가 유출 확인에 한계가 생겼고, 수사를 의뢰하기로 했습니다. <strong>공개 자료만으로 최초 침투 경로나 특정 APPM 취약점을 원인으로 확정할 수는 없습니다.</strong> <a href="https://pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&amp;mCode=B030020000&amp;nttId=12349">개인정보위 LG유플러스 조사 결과, 2026.7.30</a></p>
+<p>이 사례를 보며 던질 질문은 “접근제어 제품이 있었는가?”에서 한 단계 더 나아갑니다. **접근을 통제하는 시스템 자체에 누가 들어갈 수 있고, 그 시스템이 보관하는 중요한 정보를 어떻게 보호하고 있었는가?**라는 질문입니다.</p>
+<p>여러 시스템의 계정과 접근 정보를 관리하는 곳은 보호 우선순위가 높아야 합니다. 열쇠를 모아둔 보관함을 설치했다면, 보관함을 여는 권한과 사용 기록도 관리하는 것과 같습니다.</p>
+<p><img src="/assets/uploads/telecom-breaches-security-management-access-management.webp" alt="담당자가 여러 서버의 접근을 관리하는 콘솔에서 관리자 계정, 인증정보, 사용 기록을 점검하고 잠금함과 관리 시스템 자체를 보호하는 개념 삽화"></p>
+<p><em>그림 4. 여러 서버의 접근을 관리하는 시스템 자체도 관리자 권한과 중요정보, 사용 기록을 보호해야 합니다.</em></p>
+<p>이를 회사의 점검 항목으로 바꾸면 다음과 같습니다. 아래 항목은 LG유플러스에서 각각의 미준수가 확인됐다는 뜻이 아니라, 같은 종류의 시스템을 운영할 때 적용할 점검 제안입니다.</p>
+<ul>
+<li><strong>관리 대상:</strong> 실제 운영 서버 중 접근관리 시스템에 등록되지 않은 서버나 우회 접속 경로가 있는가?</li>
+<li><strong>관리자 권한:</strong> 솔루션 관리자와 대상 서버 관리자의 권한이 업무상 필요한 범위로 나뉘며, 관리자 접속에 적절한 추가 인증을 적용하는가?</li>
+<li><strong>민감정보 보관:</strong> 계정정보와 비밀번호를 담은 내보내기 파일·백업본의 위치와 접근자를 관리하는가?</li>
+<li><strong>운영 확인:</strong> 비밀번호 변경 실패, 로그 수집 중단, 예외 접속 같은 이벤트를 담당자가 확인하고 조치하는가?</li>
+</ul>
+<p>장비를 도입한 뒤 사람이 관리해야 한다는 말은 모든 로그를 수작업으로 읽으라는 뜻이 아닙니다. 자동화된 통제에도 <strong>설정과 적용 범위를 확인하고, 실패와 예외를 처리하며, 개선 여부를 검증할 담당자</strong>가 필요하다는 뜻입니다. <strong>담당자에게 그 일을 할 시간과 권한도 주어져야 합니다.</strong></p>
+<h2>4. 내부자 통제 — 직원 계정도 업무 범위 안에서 사용해야 합니다</h2>
+<p>관리자가 확인해야 할 부분은 계정을 가진 사람에게 지금도 그 권한이 필요한지입니다. 직원이 다른 부서로 이동했거나 협력사 계약이 끝났는데 과거의 권한이 남아 있다면, 오용뿐 아니라 계정 탈취가 발생했을 때도 피해 범위가 커질 수 있습니다.</p>
+<p>회사의 상황으로 바꿔 생각해보겠습니다. 고객 상담을 담당하는 직원이 장애 분석 서버의 관리자 권한까지 가지고 있다면, 단순히 ‘재직 중’이라는 이유로 권한을 유지하기보다 업무상 필요를 설명할 수 있어야 합니다. 반대로 긴급 장애 대응 때문에 일시적으로 필요한 권한은 승인·만료·사후 확인을 거쳐 부여할 수 있습니다.</p>
+<p>이를 위해 인사 이동과 계약 종료를 권한 변경 절차에 연결하고, 개인별 계정과 업무용 서비스 계정을 구분해 책임자를 지정해야 합니다. 중요 시스템의 접근 기록에서는 접속 성공 여부에 더해 승인된 업무·작업 시간·대상과 일치하는지도 확인할 수 있습니다. 로그가 쌓이는 것만으로 감독이 이루어지는 것은 아닙니다.</p>
+<p><img src="/assets/uploads/telecom-breaches-security-management-permission-review.webp" alt="직원이 현재 업무에 필요한 열쇠 하나를 남기고 이전 업무의 열쇠 두 개를 관리자에게 반납하는 모습으로, 불필요한 디지털 접근권한 회수를 비유한 삽화"></p>
+<p><em>그림 5. 업무가 바뀌면 불필요해진 권한을 회수하고, 현재 업무에 필요한 권한만 남겨야 합니다.</em></p>
+<p>사람에 대한 관리는 교육, 권한 부여, 사용 내역 점검, 권한 회수까지 이어지는 과정입니다. 실무자가 안전하게 일할 수 있는 절차와 도구를 함께 제공해야 지속될 수 있습니다.</p>
+<h2>5. CISO의 책임 범위는 실제 서비스 전체와 연결돼야 합니다</h2>
+<p>이 문제들을 여러 부서가 나눠 맡을수록 전체를 조정하는 역할이 중요해집니다. 네트워크팀은 연결을, 서버팀은 장비를, 업무 부서는 계정의 필요성을 알고 있습니다. 그 사이에 책임이 비는 지점이 없어야 합니다.</p>
+<p>과기정통부는 사고 당시 SKT의 정보보호최고책임자(CISO)가 전체 자산의 57%만 보안 관리 범위로 담당했다고 지적하고, CEO 직속에서 전사 정책을 총괄하도록 강화를 요구했습니다. KT에도 분산된 보안 업무를 전사 차원에서 총괄하도록 개편을 요구했습니다. 이는 “CISO는 원래 고객관리·업무망만 담당하는 직책”이라는 뜻이 아니라, <strong>해당 조직에서 실제 책임 범위가 핵심 서비스까지 충분히 연결되지 않았다는 문제</strong>입니다. <a href="https://m.korea.kr/briefing/policyBriefingView.do?newsId=156721622">SKT 조사 브리핑</a> · <a href="https://www.korea.kr/news/policyNewsView.do?newsId=156737260">KT 조사 브리핑</a></p>
+<p>개인정보보호책임자(CPO)의 범위도 함께 살펴봐야 합니다. 개인정보위원회는 SKT의 CPO 역할이 웹·앱 등 IT 영역에 한정됐던 문제를 지적했습니다. 이후 2026년 5월 이행점검에서는 IT와 통신 인프라를 아우르는 CPO 관리·감독 체계 정비, 방화벽 정책 개선과 중요정보 암호화 등을 확인했습니다. 당시 EDR 설치와 인증범위 확대 등은 추가 점검 대상이었습니다. 사고 당시의 결함과 후속 개선 상태는 이렇게 구분해서 볼 필요가 있습니다. <a href="https://pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&amp;mCode=C020010000&amp;nttId=11453">2025년 개인정보위 조사</a> · <a href="https://pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&amp;mCode=C020010000&amp;nttId=12067">2026년 5월 이행점검</a></p>
+<p>CISO가 모든 장비를 직접 설정할 필요는 없습니다. 대신 어느 부서가 운영하든 공통 보안 기준을 적용하고, 예외와 미조치 위험을 파악하며, 해결에 필요한 결정을 경영진에게 요청할 수 있어야 합니다. 개인정보 처리 문제는 CPO와 함께 조정하되 두 역할의 책임과 협업 범위를 명확히 해야 합니다.</p>
+<p><img src="/assets/uploads/telecom-breaches-security-management-ciso-coordination.webp" alt="CISO와 부서별 담당자들이 업무 단말, 서버, 네트워크, 고객 서비스 모형을 함께 보며 부서 사이의 관리 공백과 미해결 위험을 검토하는 개념 삽화"></p>
+<p><em>그림 6. CISO는 여러 부서의 보안 업무를 연결하고, 책임이 비는 지점과 해결되지 않은 위험을 함께 검토해야 합니다.</em></p>
+<p>경영진에게 보고할 내용도 장비 도입에서 한 걸음 더 나아가면 좋겠습니다. 담당자가 확인되지 않는 자산, 기한을 넘긴 중요 취약점, 만료되지 않은 임시 권한, 로그 수집이 중단된 시스템처럼 <strong>아직 해결되지 않은 위험과 필요한 결정</strong>이 드러나야 합니다.</p>
+<h2>조직의 정책을 점검 가능한 문장으로 바꿔보기</h2>
+<p>사고 사례를 읽은 뒤에는 기존 정책에서 한 문장을 골라 구체화해보면 좋겠습니다. 아래는 조직의 규모와 중요도에 맞춰 조정할 수 있는 예시입니다. 담당 부서와 검토 주기, 예외 승인 기준까지 정하면 실제 운영에 적용하기 쉬워집니다.</p>
+<div class="article-table-block article-table-block--wide">
+<p class="table-scroll-hint">표는 좌우로 움직여 볼 수 있습니다.</p>
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>정책에 담을 기준</th>
+<th>실제로 수행할 관리 활동</th>
+<th>점검할 때 확인할 자료</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>망 사이에는 승인된 업무 통신만 허용한다.</td>
+<td>연결 목적·대상·책임자·만료 조건을 기록하고 불필요한 허용 규칙을 정리한다.</td>
+<td>방화벽 정책, 변경 승인 기록, 접속 테스트 결과</td>
+</tr>
+<tr>
+<td>모든 운영 자산에 책임자를 지정한다.</td>
+<td>등록 목록과 실제 접속·운영 현황을 대조하고 도입부터 폐기까지 상태를 갱신한다.</td>
+<td>자산 목록, 실측·탐지 결과, 불일치 조치 기록</td>
+</tr>
+<tr>
+<td>업무에 필요한 기간과 범위만 권한을 부여한다.</td>
+<td>인사 이동·계약 종료·장비 유실을 계정과 인증서의 회수 절차에 연결한다.</td>
+<td>권한 승인·회수 기록, 실제 계정·인증서 상태</td>
+</tr>
+<tr>
+<td>보안 관리 시스템 자체를 중요 자산으로 보호한다.</td>
+<td>관리자 권한, 우회 경로, 백업·내보내기 파일, 통제 실패를 점검한다.</td>
+<td>관리자 목록, 설정 점검 결과, 실패·예외 조치 내역</td>
+</tr>
+<tr>
+<td>사고 대응에 조사와 증거 보존을 포함한다.</td>
+<td>격리·증거 확보·신고 판단·복구의 책임과 순서를 정하고 훈련한다.</td>
+<td>대응 절차, 보존 기록, 모의훈련 개선 내역</td>
+</tr>
+<tr>
+<td>미해결 위험은 책임자가 판단한다.</td>
+<td>조치 담당자·기한을 정하고 지연 사유와 남은 위험을 경영진에게 보고한다.</td>
+<td>위험 관리대장, 보고·의사결정 기록, 재점검 결과</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>예를 들어 “접근권한을 정기적으로 검토한다”는 정책만으로는 무엇을 확인했는지 알기 어렵습니다. 중요 시스템을 하나 골라 <strong>현재 권한 목록과 실제 담당 업무를 대조하고, 불필요한 권한을 회수한 뒤 재접속이 차단되는지 확인한다</strong>고 정하면 수행과 검증이 가능해집니다. 보안 점검의 결과물도 체크 표시에서 구체적인 조치 기록으로 바뀝니다.</p>
+<p>통신 3사의 사고는 서로 다른 시스템과 관리 문제를 드러냈습니다. 우리가 가져올 수 있는 공통 교훈은 보호 대상과 접근 경로, 관리 책임을 현실에 맞게 계속 확인해야 한다는 점입니다. 망과 자산, 계정은 운영 중에 바뀌므로 도입 당시의 설계와 정책도 그 변화를 따라가야 합니다.</p>
+<p>조직의 중요한 서비스 하나를 골라보면 어떨까요. 어떤 자산으로 구성돼 있고, 어느 망에서 누가 접근할 수 있으며, 변경과 이상 징후를 누가 확인하는지 끝까지 따라가 보는 것입니다. 그 과정에서 설명되지 않는 자산이나 권한, 담당자가 없는 연결을 발견했다면 바로 그 지점이 다음 관리 과제입니다.</p>
+</div>
+      </article>
+    </main>
+    <footer><p>사이버보안 · 개인정보보호 · 정보보호 거버넌스</p><p>© 2026 Prifoxy. All rights reserved.</p><p><a href="#privacy" data-privacy-open aria-haspopup="dialog" aria-controls="privacy">개인정보 처리방침</a></p></footer>
+  <dialog id="privacy" class="privacy-dialog" aria-labelledby="privacy-title"><div class="privacy-dialog-heading" data-nosnippet><div><span>PRIVACY</span><h2 id="privacy-title">개인정보 처리방침</h2></div><button type="button" data-privacy-close aria-label="개인정보 처리방침 닫기" autofocus>닫기 <span aria-hidden="true">×</span></button></div><div class="privacy-dialog-content" data-nosnippet><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</div></dialog><noscript><section class="privacy-fallback" data-nosnippet><h2>개인정보 처리방침</h2><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</section></noscript>
+  </body>
+</html>
+

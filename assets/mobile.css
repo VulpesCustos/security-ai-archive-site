@@ -1,0 +1,98 @@
+/* Keep table columns readable without widening the article or the page. */
+.article-table-block { min-width: 0; max-width: 100%; margin: 28px 0; }
+.article-table-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.article-table-scroll:focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
+.article-content .article-table-scroll table { margin: 0; }
+.article-content .table-scroll-hint { display: none; }
+
+@media (max-width: 600px) {
+  .site-header { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px; padding: 8px 16px 0; }
+  .site-header nav { grid-column: 1 / -1; grid-row: 2; width: 100%; margin-left: 0; gap: 4px; }
+  .site-header nav a { flex: 1 0 auto; min-width: 44px; min-height: 44px; padding: 10px 4px 12px; text-align: center; }
+  .theme-toggle { grid-column: 2; grid-row: 1; transform: none; }
+
+  .library-board, .catalog-layout, .about-catalog, .article-shell { padding-top: 24px; gap: 24px; }
+  .library-sidebar, .catalog-sidebar, .about-catalog > aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-width: 0;
+  }
+  .library-sidebar > p, .catalog-sidebar > p, .about-catalog > aside > p,
+  .library-sidebar > hr, .catalog-sidebar > hr { display: none; }
+  .library-sidebar > a, .catalog-sidebar > a, .about-catalog > aside > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    max-width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-size: .8125rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+  .library-sidebar > a.is-current, .catalog-sidebar > a.is-current, .about-catalog > aside > a.is-current {
+    border-color: var(--forest);
+    background: var(--pale);
+  }
+  .library-sidebar > a:focus-visible, .catalog-sidebar > a:focus-visible, .about-catalog > aside > a:focus-visible {
+    outline: 2px solid var(--forest);
+    outline-offset: 2px;
+  }
+  .sidebar-pageviews { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 10px; }
+  .sidebar-pageviews > div { gap: 8px; }
+
+  /* Put the code and date on one row, leaving the full next row for the title. */
+  .document-row { grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; }
+  .document-row > span { grid-column: 1; grid-row: 1; }
+  .document-row time, .document-row > strong {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    max-width: 18ch;
+    text-align: right;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .document-row > div { grid-column: 1 / -1; grid-row: 2; min-width: 0; }
+  .document-row h3 { font-size: 1.0625rem; line-height: 1.5; overflow-wrap: anywhere; }
+  .document-row p, .start-list small { font-size: .8125rem; overflow-wrap: anywhere; }
+
+  .blog-page .page-section-intro > p, .projects-page .page-section-intro > p,
+  .catalog-documents .page-section-intro > p, .page-section-intro > p, .laws-hero > p {
+    justify-self: start;
+    text-align: left;
+    text-wrap: wrap;
+    max-width: none;
+    overflow-wrap: anywhere;
+  }
+
+  /* The same article metadata is already displayed directly below the title. */
+  .article-shell { gap: 16px; }
+  .article-rail { display: flex; border: 0; }
+  .article-rail > p, .article-rail > span { display: none; }
+  .article-rail > a { display: inline-flex; align-items: center; min-height: 44px; margin: 0; }
+  .prose { min-width: 0; }
+  .prose > h1 { font-size: clamp(1.75rem, 7.5vw, 2rem); line-height: 1.3; overflow-wrap: anywhere; }
+  .article-summary { margin-top: 16px; font-size: 1rem; line-height: 1.75; overflow-wrap: anywhere; }
+  .article-meta { flex-wrap: wrap; margin: 20px 0 24px; }
+  .article-content { font-size: 1rem; line-height: 1.8; overflow-wrap: anywhere; }
+  .article-content h2 { margin-top: 36px; font-size: 1.5rem; line-height: 1.4; }
+  .article-content h3 { margin-top: 28px; font-size: 1.25rem; line-height: 1.4; }
+  .article-content ul, .article-content ol { padding-left: 1.4em; }
+  .article-content th, .article-content td { padding: 8px; overflow-wrap: anywhere; }
+  .article-table-block--wide table { min-width: 34rem; }
+  .article-content .table-scroll-hint { display: block; margin: 0 0 8px; color: var(--muted); font-size: .75rem; line-height: 1.5; }
+
+  .contact-link { min-height: 44px; }
+  .laws-page { padding-top: 24px; }
+  .law-scope-bar button, .law-filter-bar button,
+  .law-viewer-actions a, .law-viewer-actions button { min-width: 44px; min-height: 44px; }
+  .law-viewer-actions { flex-wrap: wrap; }
+  .law-viewer-actions a, .law-viewer-actions button { display: inline-flex; align-items: center; justify-content: center; }
+  .law-search-control input, .law-article-search input { font-size: 1rem; min-height: 44px; }
+  .law-paragraph, .law-subitems, .law-article h3 { overflow-wrap: anywhere; }
+}
