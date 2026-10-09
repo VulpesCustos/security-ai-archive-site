@@ -1,0 +1,288 @@
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; media-src 'self'; manifest-src 'self'; script-src 'self' https://challenges.cloudflare.com; connect-src https://laws-api.prifoxy.com; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#124a34">
+    <meta name="description" content="정보 마스킹과 ChatGPT·Claude 설정부터 계정·API 키 관리, 에이전트 통제, 사내 정책과 점검표까지 운영 실무를 정리합니다.">
+    <link rel="canonical" href="https://prifoxy.com/notes/enterprise-ai-security-operations/">
+    <meta property="og:site_name" content="Prifoxy">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="보안담당자를 위한 안전한 AI 사용 가이드 2: 안전한 활용과 운영">
+    <meta property="og:description" content="정보 마스킹과 ChatGPT·Claude 설정부터 계정·API 키 관리, 에이전트 통제, 사내 정책과 점검표까지 운영 실무를 정리합니다.">
+    <meta property="og:url" content="https://prifoxy.com/notes/enterprise-ai-security-operations/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="보안담당자를 위한 안전한 AI 사용 가이드 2: 안전한 활용과 운영">
+    <meta name="twitter:description" content="정보 마스킹과 ChatGPT·Claude 설정부터 계정·API 키 관리, 에이전트 통제, 사내 정책과 점검표까지 운영 실무를 정리합니다.">
+    
+    <meta property="og:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta name="twitter:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+    <meta name="twitter:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+
+    <title>보안담당자를 위한 안전한 AI 사용 가이드 2: 안전한 활용과 운영 | Prifoxy</title>
+    <script src="/assets/theme.js?v=a1fbe31f2050"></script>
+    <link rel="icon" href="/assets/favicon.svg?v=bdb9c835b634" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css?v=3543e871857e">
+  <link rel="stylesheet" href="/assets/mobile.css?v=1cc356585465">
+    <script src="/assets/privacy.js?v=20260906" defer></script>
+  <link rel="stylesheet" href="/assets/article-media.css?v=c688d1cb4ab4">
+    <script src="/assets/article-media.js?v=f197b8ec14f3" defer></script>
+  <script src="/assets/pageviews.js?v=2aa0a6b6de25" defer></script>
+  </head>
+  <body>
+    
+    
+    <header class="site-header article-header">
+  <a class="wordmark" href="/" aria-label="Prifoxy 홈"><strong>Prifoxy</strong></a>
+  <nav aria-label="주요 메뉴">
+    <a href="/">Home</a>
+    <a href="/notes/" aria-current="page">Blog</a>
+    <a href="/projects/">Project</a>
+    <a href="/laws/">Laws</a>
+    <a href="/about/">About</a>
+  </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="다크 모드" aria-pressed="false" title="다크 모드로 전환" hidden>
+    <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.8 8.8 0 1 0 20.5 14.2Z"/></svg>
+    <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</header>
+
+    <main class="article-shell">
+      <aside class="article-rail"><p>글 정보</p><span>GRC</span><span>정보보호 거버넌스</span><span>2026년 9월 27일</span><a href="/notes/">Blog로 돌아가기 →</a></aside>
+      <article class="prose">
+        <p class="library-kicker">정보보호 거버넌스</p>
+        <h1>보안담당자를 위한 안전한 AI 사용 가이드 2: 안전한 활용과 운영</h1>
+        <p class="article-summary">정보 마스킹과 ChatGPT·Claude 설정부터 계정·API 키 관리, 에이전트 통제, 사내 정책과 점검표까지 운영 실무를 정리합니다.</p>
+        <div class="article-meta"><span>2026년 9월 27일</span><span class="reading-time" data-nosnippet title="AI가 산정한 예상 읽기 시간: 약 28분" aria-label="예상 읽기 시간 약 28분"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6"></circle><path d="M8 4.5V8l2.5 1.5"></path></svg><span>28m</span></span></div>
+        <div class="article-content"><blockquote>
+<p><strong>안전한 AI 사용 가이드 · 2편</strong></p>
+<p><a href="/notes/enterprise-ai-security-guide/">1편: AI 도입과 보안 설계</a> · <strong>안전한 활용과 운영</strong></p>
+</blockquote>
+<h2>1. 상용 AI에 자료를 넣기 전: 마스킹보다 먼저 줄일 정보가 있습니다</h2>
+<p>직원이 고객 이메일의 문장을 다듬고 싶을 뿐이라면 고객 실명, 계약번호, 전체 메일 이력까지 제공할 필요는 없습니다. <strong>업무에 필요한 부분만 추리고, 식별정보를 바꾸며, 남은 맥락으로 비밀이 드러나지 않는지 확인하는 순서</strong>가 좋습니다.</p>
+<p>다음은 예시입니다.</p>
+<div class="article-table-block article-table-block--wide">
+<p class="table-scroll-hint">표는 좌우로 움직여 볼 수 있습니다.</p>
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>방법</th>
+<th>변경 예시</th>
+<th>남는 위험과 사용 요령</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>별표 가림</td>
+<td><code>김테스트</code> → <code>김***</code></td>
+<td>조직·직책·사건 날짜가 남으면 특정인을 짐작할 수 있음. 이름만 가렸다고 충분하지 않음</td>
+</tr>
+<tr>
+<td>일관된 치환</td>
+<td><code>김테스트</code>, <code>가상거래처 해솔</code> → <code>고객 A</code>, <code>거래처 B</code></td>
+<td>문맥을 유지하기 좋음. 원래 값과의 대응표는 AI에 보내지 않고 별도 보호</td>
+</tr>
+<tr>
+<td>범주화·일반화</td>
+<td>정확한 생년월일 → 연령대, 상세 주소 → 지역 수준</td>
+<td>작은 조직이나 드문 사건에서는 조합만으로도 식별될 수 있음</td>
+</tr>
+<tr>
+<td>더미(가상) 데이터</td>
+<td>실제 주문을 가짜 주문번호·날짜·금액으로 대체</td>
+<td>코드 구조·서식 검토에 유용. 실제 분석·정산 결과를 얻는 용도로 혼동하지 않기</td>
+</tr>
+<tr>
+<td>불필요한 내용 제거</td>
+<td>메일 본문에서 서명·연락처·이전 대화 삭제</td>
+<td>질문에 꼭 필요한 내용만 남김. 첨부파일과 문서 메타데이터도 별도로 확인</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>예를 들어 입력을 이렇게 바꿔볼 수 있습니다.</p>
+<blockquote>
+<p><strong>원래 요청의 예시:</strong> “김테스트 고객의 7억 3천만 원 계약과 미공개 제품 출시 일정이 담긴 이 메일을 부드럽게 고쳐줘.”</p>
+<p><strong>업무에 맞게 줄인 요청:</strong> “거래처에 일정 변경을 정중하게 안내하는 메일 초안을 작성해줘. 고객명·계약금액·제품명·날짜는 <code>[고객명]</code>, <code>[금액]</code>, <code>[제품명]</code>, <code>[날짜]</code> 자리표시자로 남겨줘.”</p>
+</blockquote>
+<p>이 경우에는 실제 계약정보를 AI에 넘길 이유가 거의 없습니다. 초안을 받은 뒤 승인된 업무 환경에서 값을 채우면 됩니다. 반대로 실제 수치 분석이 필요한 업무라면 데이터를 임의로 바꾸기보다, 그 데이터를 처리하도록 승인된 환경을 사용해야 합니다.</p>
+<p><strong>마스킹은 자동으로 익명화를 의미하지 않습니다.</strong> 가명정보도 개인정보이며, 재식별 가능성과 법적 처리 요건을 검토해야 합니다. 사람 이름을 모두 지워도 미공개 가격·제품 계획·내부 취약점은 여전히 기업의 비밀정보입니다. <a href="https://www.privacy.go.kr/front/bbs/bbsView.do?bbsNo=BBSMSTR_000000000049&amp;bbscttNo=20877">개인정보보호위원회 가명정보 처리 가이드라인, 2026년 3월 개정</a></p>
+<p>PDF의 검은 사각형 아래 원문이 남아 있거나, 문서 주석·변경 이력·숨긴 시트·파일명에 정보가 남는 경우도 점검해야 합니다. 가린 모양을 보는 것과 실제 추출되는 내용을 확인하는 것은 다릅니다. 마스킹된 산출물을 다시 열어 복사·텍스트 추출·첨부 확인을 수행하고, AI가 만든 결과를 외부로 보낼 때도 사람이 검토합니다.</p>
+<h2>2. ChatGPT와 Claude: 네 가지 설정을 따로 확인합니다</h2>
+<p>제품명이 같아도 개인용, 기업용, API의 조건은 다릅니다. 메뉴는 요금제·플랫폼·조직 정책에 따라 달라질 수 있습니다.</p>
+<div class="article-table-block article-table-block--wide">
+<p class="table-scroll-hint">표는 좌우로 움직여 볼 수 있습니다.</p>
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>확인할 것</th>
+<th>의미</th>
+<th>흔한 오해</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>학습 사용</td>
+<td>입력·출력이 모델 개선에 사용되는가?</td>
+<td>학습을 끄면 저장도 하지 않을 것이라는 생각</td>
+</tr>
+<tr>
+<td>보관·삭제</td>
+<td>대화·파일·로그가 어디에 얼마나 남는가?</td>
+<td>대화 삭제가 모든 복사본의 즉시 삭제라는 생각</td>
+</tr>
+<tr>
+<td>기억</td>
+<td>이후 대화에서 이전 정보를 다시 사용하는가?</td>
+<td>원래 대화를 지우면 기억도 모두 지워진다는 생각</td>
+</tr>
+<tr>
+<td>외부 연동</td>
+<td>어떤 계정 권한으로 외부 자료를 읽고 행동하는가?</td>
+<td>연동을 끊으면 이미 가져온 정보도 없어진다는 생각</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h3>ChatGPT·OpenAI에서 확인할 항목</h3>
+<p><strong>개인 계정의 데이터 제어부터 확인합니다.</strong> 웹·모바일의 <code>Settings → Data controls</code>에서 현재 제공되는 데이터 사용·공유 설정을 확인합니다. 모델 개선 목적의 공유 선택지가 보인다면 회사의 기준에 맞게 설정하고 적용 상태를 기록합니다. 개인 계정에서 설정을 바꾸었다는 사실만으로 업무자료 입력이 허용되는 것은 아닙니다. <a href="https://learn.chatgpt.com/docs/browser#privacy-and-browser-data">공식 데이터 제어 안내</a></p>
+<p><strong>업무용 워크스페이스와 데이터 조건을 확인합니다.</strong> Business·Enterprise·Edu 워크스페이스 데이터는 기본적으로 모델 학습에 사용되지 않습니다. 그렇다고 대화와 파일을 보관하지 않는다는 뜻은 아닙니다. 개인 계정의 데이터 설정을 기업용 계약과 같은 것으로 판단하지 말고, 회사가 승인한 작업 공간에서 사용하도록 안내합니다. <a href="https://learn.chatgpt.com/docs/enterprise/chatgpt-work-cloud-security">공식 기업용 보안 문서</a></p>
+<p><strong>기억과 연결 기능을 따로 검토합니다.</strong> ChatGPT의 <code>Settings → Personalization</code>에서 메모리를 관리합니다. 필요하지 않은 기억 기능은 끄고 기존 기억도 검토합니다. 기업 관리자는 앱·연결 관리에서 사용자를 제한하고, 지원되는 연결은 읽기 전용이나 승인된 동작만 허용합니다. 업무와 관계없는 개인 드라이브·메일함 연결은 해제합니다. <a href="https://learn.chatgpt.com/docs/customization/memories">메모리 관리</a> · <a href="https://learn.chatgpt.com/docs/enterprise/apps-and-connectors">기업용 앱·연결 통제</a></p>
+<p><strong>삭제 대상을 구분합니다.</strong> 특히 Work의 대화, Library 파일, 저장된 기억, 앱 연결과 브라우저 데이터는 별도 관리 대상입니다. 대화를 지웠다는 이유로 첨부파일이나 기억까지 모두 사라졌다고 판단하지 않습니다. <a href="https://learn.chatgpt.com/docs/enterprise/chatgpt-work-cloud-security">Work 보관·삭제 범위</a></p>
+<p><strong>API는 별도 보관 정책을 읽어야 합니다.</strong> OpenAI API는 명시적 데이터 공유 동의가 없으면 기본적으로 모델 학습에 사용하지 않습니다. 그러나 기본 악용 모니터링 로그와 기능별 상태 저장은 별개입니다. 기본 로그는 최대 30일 보관될 수 있고 예외 조건도 있습니다. <code>store:false</code>만으로 모든 보관이 없어지는 것은 아니며, Zero Data Retention도 승인 여부와 기능·모델별 적용 범위를 확인해야 합니다. <a href="https://developers.openai.com/api/docs/guides/your-data">API 데이터 제어</a></p>
+<h3>Claude·Anthropic에서 확인할 항목</h3>
+<p><strong>개인용은 모델 개선 설정을 확인합니다.</strong> Free·Pro·Max 등 개인용 계정에서는 <code>Settings → Privacy → Help Improve our AI models</code>를 확인하고 조직의 기준에 맞게 끕니다. 개인 유료 구독을 기업용 데이터 처리 조건으로 오해하지 않아야 합니다. 끄더라도 이미 완료된 학습을 소급 취소한다는 뜻은 아닙니다. <a href="https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings">개인용 모델 개선 설정</a></p>
+<p><strong>기억과 연결을 정리합니다.</strong> 메모리는 현재 <code>Settings → Memory</code>, 일부 화면에서는 <code>Settings → Capabilities</code>에서 관리합니다. 원래 대화를 삭제해도 별도 기억이 남을 수 있으므로 기억 항목을 확인합니다. 외부 연결은 <code>Customize → Connectors</code>에서 관리하며, 불필요한 연결을 끊고 필요한 도구도 승인·차단 범위를 설정합니다. <a href="https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context">메모리 안내</a> · <a href="https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities">커넥터 안내</a></p>
+<p><strong>임시 대화도 보관 조건을 확인합니다.</strong> Claude의 Incognito 대화는 사용자의 대화 기록·메모리에 남지 않고 모델 학습에 사용되지 않지만, 기본 30일 보관과 기업 정책의 예외가 있습니다. Team·Enterprise에서는 조직 소유자의 데이터 내보내기에 포함됩니다. ‘임시’라는 이름을 민감정보 입력을 허용하는 근거로 삼지 않습니다. <a href="https://support.claude.com/en/articles/12260368-use-incognito-chats">Incognito 공식 안내</a></p>
+<p><strong>기업용·API의 예외를 점검합니다.</strong> Team·Enterprise·API는 기본적으로 입력·출력을 모델 학습에 사용하지 않지만, 피드백 제출이나 명시적 동의의 조건을 별도로 확인합니다. API의 기본 삭제 주기, 파일 저장 기능, 법적·안전상 예외와 기업용 보관 설정도 다릅니다. 연결을 끊어도 이미 대화에 가져온 자료는 남을 수 있습니다. <a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training">상용 제품 학습 정책</a> · <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">조직 데이터 보관</a> · <a href="https://support.claude.com/en/articles/10166901-use-google-workspace-connectors">Google 연결 해제와 자료 보관</a></p>
+<p>어느 제품이든 “학습하지 않습니다”라는 한 문장만으로 도입 검토를 끝내지 않는 것이 좋습니다. 특히 API·에이전트 기능은 모델, 도구, 파일 저장과 실행 환경이 추가될 때 처리 조건이 달라질 수 있습니다.</p>
+<h2>3. 계정과 API 키는 AI 밖에서도 지켜야 합니다</h2>
+<p>AI의 답변을 아무리 잘 통제해도 계정이 탈취되면 연결된 문서와 업무 도구가 위험해집니다. 회사가 관리하는 업무 계정과 개인 계정을 분리하고, 계정 공유를 금지하며, 이동·퇴사 시 계정과 연결 권한을 함께 회수해야 합니다.</p>
+<p>다중요소 인증(MFA)을 지원하는 업무 계정에는 이를 적용합니다. Google·Microsoft 로그인이나 조직의 통합 로그인(SSO)을 사용한다면 실제 인증을 담당하는 서비스에서 MFA와 접근 정책을 강제합니다. 제품마다 자체 MFA 메뉴가 같다고 가정하지 말고, ‘SSO 설정 완료’와 ‘SSO 사용 강제’도 구분합니다. <a href="https://support.claude.com/en/articles/13132885-set-up-single-sign-on-sso">Claude SSO 설정과 강제 적용</a></p>
+<p>API 키는 코드, 공유 문서, 프롬프트, 브라우저 코드와 앱 배포물에 하드코딩하지 않습니다. 비밀정보 관리 시스템에 저장하고 실행 시 안전하게 제공하며, 운영·개발 프로젝트와 서비스 계정을 분리합니다. 가능하면 지원되는 단기 자격증명을 사용하고, 키를 사용하는 경우 권한·유효기간·교체 정책과 폐기 절차를 정합니다. 환경변수를 쓰더라도 로그나 빌드 결과에 출력되면 노출될 수 있습니다. <a href="https://developers.openai.com/api/docs/guides/production-best-practices">OpenAI 운영 권고</a> · <a href="https://platform.claude.com/docs/en/manage-claude/authentication">Anthropic API 인증</a></p>
+<p>유출이 의심되면 정기 교체일까지 기다리지 않고 키를 폐기·재발급하고 사용 기록을 확인합니다. 과도한 호출을 발견할 수 있도록 사용량 알림과 예산·호출 상한도 운영합니다. 경고만 보내는지, 실제 추가 호출을 차단하는지는 시험으로 확인해야 합니다.</p>
+<h2>4. 에이전틱 AI: 답변을 넘어 실제 업무를 수행할 때</h2>
+<p>에이전틱 AI는 목표를 받아 작업을 나누고, 도구를 호출하고, 결과를 확인해 다음 행동을 이어가는 시스템입니다. 모든 기능이 완전 자율일 필요는 없습니다. 사람이 중간에 승인하는 구조도 여기에 포함할 수 있습니다.</p>
+<p>예를 들어 고객 문의를 읽어 담당 부서를 분류하는 업무는 비교적 좁게 시작할 수 있습니다. 이후 회신 초안을 만들고, 고객 기록을 수정하고, 실제 발송까지 맡기면 필요한 통제가 늘어납니다. 보안 운영에서도 로그 요약과 조치 제안, 실제 계정 잠금이나 시스템 격리는 서로 다른 단계로 다뤄야 합니다.</p>
+<p><img src="/assets/uploads/enterprise-ai-agent-control.svg?v=20260927-r2" alt="AI가 작업을 제안한 뒤 모델 밖의 권한 검사와 필요한 승인을 거쳐 도구를 실행하고, 실제 결과를 확인하는 구조. 취소 시 대기 작업과 자격을 회수합니다."></p>
+<p><em>그림 1. 중요한 권한 판단은 모델 밖의 시스템에서 강제합니다. 승인 화면, 실행 API, 취소와 복구가 같은 작업을 가리켜야 합니다.</em></p>
+<p>업무를 맡기기 전에는 <strong>목표, 허용 도구, 읽을 자료, 변경 가능한 대상, 비용·시간 상한, 승인 조건, 중단 방법</strong>을 정합니다. 읽기만 필요한 에이전트에게 삭제·발송 권한까지 줄 이유는 없습니다.</p>
+<p>승인에는 실제 파일·수신자·금액·변경 전후 내용이 보여야 합니다. 모델이 “안전한 작업”이라고 설명하는 것만으로 승인하지 않도록 하고, 승인 뒤 대상이나 인자가 바뀌면 다시 검증하게 합니다. 외부 문서가 작업 목표를 바꾸려 하더라도 실행 API는 권한과 업무 규칙을 지켜야 합니다.</p>
+<p><strong>점검은 완료 보고와 실제 결과를 대조하는 방식으로 합니다.</strong> “메일을 보내지 않았다”는 답변이 나와도 발송 로그에 남아 있다면 통제가 실패한 것입니다. 시험 환경에서 권한 없는 요청, 잘못된 외부 지시, 도구 오류와 재시도를 넣어보고 실행 기록을 확인합니다. 정상 업무도 함께 시험해 과도한 차단을 발견합니다.</p>
+<p>취소 버튼 역시 확인이 필요합니다. 화면 표시만 바뀌고 예약된 작업이나 다른 에이전트에 넘긴 작업이 계속 실행될 수 있습니다. 취소 시 신규 호출과 대기 작업을 막고, 실행 자격을 회수하며, 이미 반영한 변경은 정해진 복구 절차로 처리해야 합니다. 관련 위험은 <a href="/notes/owasp-agentic-top-10-2026/">OWASP Agentic Top 10 소개</a>에서 항목별로 살펴볼 수 있습니다.</p>
+<h2>5. 거버넌스는 ‘사용 금지’ 공지보다 구체적이어야 합니다</h2>
+<p>직원이 어떤 도구를 써도 되는지, 민감한 업무는 어디에서 처리해야 하는지 모르면 편한 개인 서비스로 이동할 수 있습니다. 조직이 승인하지 않은 AI가 업무에 쓰이는 이른바 ‘섀도 AI’를 관리하려면, 현황을 파악하고 안전한 선택지를 제공해야 합니다.</p>
+<h3>정책에는 실제로 선택할 수 있는 기준을 적습니다</h3>
+<p>다음은 회사 상황에 맞게 조정할 수 있는 정책 문구의 예시입니다.</p>
+<blockquote>
+<p>업무에는 승인된 서비스·요금제·계정만 사용한다. 미승인 서비스와 개인용 계정에는 개인정보, 민감정보, 영업비밀, 인증정보와 비공개 업무자료를 입력하지 않는다. 승인된 서비스에서도 허용 데이터 등급과 목적을 준수하고 필요한 최소 정보만 제공한다. 마스킹으로 위험이 충분히 낮아지지 않는 업무는 승인된 내부 환경이나 별도 검토 절차를 이용한다.</p>
+</blockquote>
+<p>정책에는 허용 서비스 목록과 기능, 입력 가능한 정보의 등급, 외부 연동 승인, 생성 결과의 검토 책임, 기록 보관과 삭제, 예외 승인자를 포함합니다. 비밀번호·API 키처럼 AI 입력이 필요하지 않은 비밀정보는 별도로 명확히 금지합니다.</p>
+<p>입력창의 경고 배너에는 “민감정보 금지”와 함께 승인된 대체 서비스와 문의 경로를 안내합니다. 위반 시에는 사실 확인·피해 제한·보고·재교육 등 처리 절차를 정하되, 실수로 정보를 넣은 직원이 신속하게 신고할 수 있도록 해야 합니다.</p>
+<h3>서비스별 담당자와 증거를 남깁니다</h3>
+<p>AI 하나마다 다음 내용을 한 장의 관리표로 정리하면 시작하기 쉽습니다.</p>
+<blockquote>
+<p><strong>서비스명·담당 부서 / 사용 목적 / 제품·요금제·공급자 / 데이터 등급 / 사용자·실행 계정 / 연결 도구 / 보관·삭제 조건 / 승인·중단 담당자 / 최근 점검일·다음 점검일</strong></p>
+</blockquote>
+<p>업무 부서는 사용 목적과 업무 영향을, 개발·운영은 구현과 운영 통제를, 보안·개인정보 담당은 위험과 처리 조건을 검토합니다. 남은 위험을 수용할 책임자도 정합니다. 보안담당자가 모든 업무의 허용 여부를 혼자 결정하는 구조는 지속하기 어렵습니다.</p>
+<p>아래는 시스템별 자가진단에 사용할 수 있는 최소 점검표입니다. 각 항목에 적용 여부, 확인한 증거, 담당자, 미흡사항과 조치 기한을 함께 남깁니다. ‘해당 없음’에는 이유를 적고 ‘미확인’을 ‘양호’로 처리하지 않습니다.</p>
+<div class="article-table-block">
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>점검 질문</th>
+<th>확인할 증거의 예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>사용 목적·허용 서비스·담당자가 정해졌는가?</td>
+<td>서비스 관리표, 승인 기록</td>
+</tr>
+<tr>
+<td>어떤 정보가 외부로 나가고 어디에 남는지 아는가?</td>
+<td>데이터 흐름도, 계약과 실제 설정</td>
+</tr>
+<tr>
+<td>학습·보관·기억·연동을 각각 확인했는가?</td>
+<td>해당 계정·기능의 설정과 삭제 시험</td>
+</tr>
+<tr>
+<td>사용자·고객별 검색과 실행 권한이 유지되는가?</td>
+<td>권한이 다른 시험 계정의 결과와 API 기록</td>
+</tr>
+<tr>
+<td>외부 자료의 지시가 요청 밖 행동으로 이어지지 않는가?</td>
+<td>시험 입력, 도구 호출, 실제 상태 변화</td>
+</tr>
+<tr>
+<td>공급자·모델·도구·라이브러리의 변경을 관리하는가?</td>
+<td>출처·버전 목록과 변경 승인</td>
+</tr>
+<tr>
+<td>계정의 MFA와 계정·키의 최소 권한·회수 절차가 작동하는가?</td>
+<td>인증 정책, 키 관리 내역, 회수 시험</td>
+</tr>
+<tr>
+<td>중요한 실행은 정확한 내용으로 승인되고 중복되지 않는가?</td>
+<td>승인 대상, 실행 인자, 거래 결과</td>
+</tr>
+<tr>
+<td>비용·시간 상한과 취소·복구가 실제 작동하는가?</td>
+<td>제한 시험, 중단 시점, 복구 결과</td>
+</tr>
+<tr>
+<td>직원이 안전한 대체 수단과 신고 경로를 아는가?</td>
+<td>안내·교육 기록, 신고와 후속 처리 사례</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>주기는 위험도와 변경 빈도에 맞게 정합니다. 예를 들어 사용 현황은 매월, 권한과 계약·보관 조건은 분기별로 검토할 수 있습니다. 이는 운영 예시이며 모든 기업에 정해진 의무 주기를 뜻하지 않습니다.</p>
+<p>정기 점검 외에도 새 모델·공급자·데이터·외부 연결·쓰기 권한이 추가되면 관련 부분을 다시 검토합니다. 간단한 요약 도구에 메일 발송 기능 하나를 붙이는 변경도 보안상으로는 중요한 변경일 수 있습니다.</p>
+<h3>교육과 사고 대응도 실제 업무 장면으로 연습합니다</h3>
+<p>교육에서는 정책 문서를 읽는 데 그치지 않고, 메일에서 제거할 정보 찾기, 개인 공간과 업무 공간 구분하기, AI가 제시한 출처 확인하기, 의심스러운 승인 요청 거절하기를 짧게 연습할 수 있습니다. 보안팀이 승인된 프롬프트 예시와 더미 데이터를 제공하면 현업이 기준을 적용하기 쉬워집니다.</p>
+<p>잘못된 자료 입력이나 비정상 실행이 발견되면 해당 연결·키·작업을 제한하고, 필요한 기록을 보호해 확보한 뒤 어떤 자료와 계정에 영향이 있었는지 확인합니다. 보안·개인정보·업무 담당자가 통지와 후속 조치 필요성을 판단하고, 삭제 요청·복구·권한 수정과 재점검으로 이어갑니다. 진단 로그 자체에 민감정보를 과도하게 남기지 않도록 수집 범위와 열람 권한도 정해야 합니다.</p>
+<p>레드티밍은 이 운영 체계를 시험하는 방법 중 하나입니다. 승인된 범위와 가짜 데이터를 사용하고, 공격 문장 몇 개의 성공 여부보다 정보 접근·상태 변경·실행 결과를 증거로 남깁니다. KISA도 2026년 「AI 보안 레드티밍 가이드」를 공개했습니다. <a href="https://www.kisa.or.kr/401/form?lang_type=KO&amp;postSeq=3713">KISA 가이드</a></p>
+<h2>먼저 AI 서비스 하나의 정보와 권한을 그려봅니다</h2>
+<p>보안담당자가 모든 모델의 내부 구조부터 공부해야 하는 것은 아닙니다. 우선 현재 사용하는 AI 하나를 골라 <strong>누가 무엇을 입력하는지, 어떤 자료와 연결되는지, 무엇을 실행할 수 있는지, 누가 멈출 수 있는지</strong>를 확인해보면 좋겠습니다.</p>
+<p>그다음 허용 기준을 정하고 실제 계정과 시험 데이터로 검증합니다. 사내 구축, 상용 서비스, 에이전트 모두 이 과정이 필요합니다. AI의 활용 범위를 넓힐수록 정보와 권한을 관리하는 범위도 함께 넓혀야 합니다.</p>
+<hr>
+<p><strong>이전 글:</strong> <a href="/notes/enterprise-ai-security-guide/">1편 — AI 도입과 보안 설계</a></p>
+</div>
+      </article>
+    </main>
+    <footer><p>사이버보안 · 개인정보보호 · 정보보호 거버넌스</p><p>© 2026 Prifoxy. All rights reserved.</p><p><a href="#privacy" data-privacy-open aria-haspopup="dialog" aria-controls="privacy">개인정보 처리방침</a></p></footer>
+  <dialog id="privacy" class="privacy-dialog" aria-labelledby="privacy-title"><div class="privacy-dialog-heading" data-nosnippet><div><span>PRIVACY</span><h2 id="privacy-title">개인정보 처리방침</h2></div><button type="button" data-privacy-close aria-label="개인정보 처리방침 닫기" autofocus>닫기 <span aria-hidden="true">×</span></button></div><div class="privacy-dialog-content" data-nosnippet><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</div></dialog><noscript><section class="privacy-fallback" data-nosnippet><h2>개인정보 처리방침</h2><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</section></noscript>
+  </body>
+</html>
+

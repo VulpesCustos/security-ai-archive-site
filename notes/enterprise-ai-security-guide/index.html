@@ -1,0 +1,221 @@
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; media-src 'self'; manifest-src 'self'; script-src 'self' https://challenges.cloudflare.com; connect-src https://laws-api.prifoxy.com; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#124a34">
+    <meta name="description" content="AI 사고 통계와 기업의 네 가지 도입 구조를 살펴보고, 수명주기와 도입 유형에 따른 보안 설계·점검 방법을 정리합니다.">
+    <link rel="canonical" href="https://prifoxy.com/notes/enterprise-ai-security-guide/">
+    <meta property="og:site_name" content="Prifoxy">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="보안담당자를 위한 안전한 AI 사용 가이드 1: AI 도입과 보안 설계">
+    <meta property="og:description" content="AI 사고 통계와 기업의 네 가지 도입 구조를 살펴보고, 수명주기와 도입 유형에 따른 보안 설계·점검 방법을 정리합니다.">
+    <meta property="og:url" content="https://prifoxy.com/notes/enterprise-ai-security-guide/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="보안담당자를 위한 안전한 AI 사용 가이드 1: AI 도입과 보안 설계">
+    <meta name="twitter:description" content="AI 사고 통계와 기업의 네 가지 도입 구조를 살펴보고, 수명주기와 도입 유형에 따른 보안 설계·점검 방법을 정리합니다.">
+    
+    <meta property="og:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta name="twitter:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+    <meta name="twitter:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+
+    <title>보안담당자를 위한 안전한 AI 사용 가이드 1: AI 도입과 보안 설계 | Prifoxy</title>
+    <script src="/assets/theme.js?v=a1fbe31f2050"></script>
+    <link rel="icon" href="/assets/favicon.svg?v=bdb9c835b634" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css?v=3543e871857e">
+  <link rel="stylesheet" href="/assets/mobile.css?v=1cc356585465">
+    <script src="/assets/privacy.js?v=20260906" defer></script>
+  <link rel="stylesheet" href="/assets/article-media.css?v=c688d1cb4ab4">
+    <script src="/assets/article-media.js?v=f197b8ec14f3" defer></script>
+  <script src="/assets/pageviews.js?v=2aa0a6b6de25" defer></script>
+  </head>
+  <body>
+    
+    
+    <header class="site-header article-header">
+  <a class="wordmark" href="/" aria-label="Prifoxy 홈"><strong>Prifoxy</strong></a>
+  <nav aria-label="주요 메뉴">
+    <a href="/">Home</a>
+    <a href="/notes/" aria-current="page">Blog</a>
+    <a href="/projects/">Project</a>
+    <a href="/laws/">Laws</a>
+    <a href="/about/">About</a>
+  </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="다크 모드" aria-pressed="false" title="다크 모드로 전환" hidden>
+    <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.8 8.8 0 1 0 20.5 14.2Z"/></svg>
+    <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</header>
+
+    <main class="article-shell">
+      <aside class="article-rail"><p>글 정보</p><span>GRC</span><span>정보보호 거버넌스</span><span>2026년 9월 27일</span><a href="/notes/">Blog로 돌아가기 →</a></aside>
+      <article class="prose">
+        <p class="library-kicker">정보보호 거버넌스</p>
+        <h1>보안담당자를 위한 안전한 AI 사용 가이드 1: AI 도입과 보안 설계</h1>
+        <p class="article-summary">AI 사고 통계와 기업의 네 가지 도입 구조를 살펴보고, 수명주기와 도입 유형에 따른 보안 설계·점검 방법을 정리합니다.</p>
+        <div class="article-meta"><span>2026년 9월 27일</span><span class="reading-time" data-nosnippet title="AI가 산정한 예상 읽기 시간: 약 19분" aria-label="예상 읽기 시간 약 19분"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6"></circle><path d="M8 4.5V8l2.5 1.5"></path></svg><span>19m</span></span></div>
+        <div class="article-content"><blockquote>
+<p><strong>안전한 AI 사용 가이드 · 1편</strong></p>
+<p><strong>AI 도입과 보안 설계</strong> · <a href="/notes/enterprise-ai-security-operations/">2편: 안전한 활용과 운영</a></p>
+</blockquote>
+<p>이메일 초안을 쓰고, 보고서를 다듬고, 자료를 찾고, 코드를 만드는 일. 회사에서 AI를 활용하는 모습은 이제 특별하지 않습니다. 회의 내용을 자동으로 정리하거나, 고객 문의를 분류하고, 사내 문서를 검색하는 기능도 업무에 사용되고 있습니다.</p>
+<p>보안담당자가 확인해야 할 대상도 함께 늘었습니다. 직원이 대화창에 붙여넣는 내용뿐 아니라, AI가 자동으로 읽는 문서와 연결된 계정, 생성한 코드, 대신 실행하는 업무까지 살펴봐야 합니다. 사람이 직접 입력하지 않은 정보도 AI 서비스로 전달될 수 있기 때문입니다.</p>
+<p><strong>어떤 AI를 도입할지, 어떤 정보를 허용할지, 운영 중 무엇을 점검할지</strong>를 보안담당자가 한 흐름으로 확인할 수 있도록 정리했습니다.</p>
+<blockquote>
+<p><strong>시리즈의 핵심</strong></p>
+<ul>
+<li>구축 위치와 함께 데이터의 이동 경로, 사용자 권한, 실행 가능한 업무를 확인합니다.</li>
+<li>학습 제외, 대화 보관, 기억, 외부 연동은 서로 다른 설정입니다.</li>
+<li>허용 기준과 대체 수단을 제공하고, 정한 통제가 실제로 작동하는지 검증합니다.</li>
+</ul>
+</blockquote>
+<h2>1. 증가하는 AI 관련 보안사고</h2>
+<p>AI 활용이 확산되는 가운데, 공개적으로 보고되는 사고와 피해 사례도 늘고 있습니다. Stanford AI Index 2026의 공개 원자료에 따르면 AI 관련 사고·유해사례는 <strong>2023년 168건, 2024년 281건, 2025년 362건</strong>으로 집계됐습니다. 다만 여기에는 사이버 침해뿐 아니라 AI의 잘못된 판단 등으로 발생한 피해도 포함됩니다. 기업 대상 공격 건수보다는 <strong>AI가 현실에서 어떤 문제를 일으키고 있는지 보여주는 자료</strong>로 읽는 것이 적절합니다.</p>
+<p><img src="/assets/uploads/enterprise-ai-incidents.png" alt="2023년 168건, 2024년 281건, 2025년 362건인 공개 보고 AI 사고·유해사례. 2026년은 연간 집계가 끝나지 않아 비교에서 제외합니다."></p>
+<p><em>그림 1. 같은 공개 데이터 파일에 담긴 연도별 값을 사용했습니다. AI Incident Database 기반 자료이며, 실제 발생한 모든 사고나 기업의 사고 발생률을 뜻하지 않습니다.</em></p>
+<p>보안담당자가 주목할 변화는 <strong>공격자가 AI를 활용하는 방식과 기업이 AI에 맡기는 업무가 함께 달라지고 있다는 점</strong>입니다. 2026년 6월 Five Eyes 사이버보안 기관 공동성명은 AI가 공격자의 진입 장벽을 낮추고, 공격의 속도와 복잡성을 높이고 있다고 경고했습니다. 취약점을 발견한 뒤 실제 공격에 이용하기까지 걸리는 시간이 짧아지면, 기업이 패치하고 대응할 여유도 줄어듭니다. <a href="https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/4523810/five-eyes-cyber-security-agencies-statement/">Five Eyes 공동성명</a></p>
+<p>기업 내부에서도 AI가 접근하는 정보와 권한이 늘어납니다. 이메일 초안을 작성하던 AI에 메일함 검색, 고객정보 조회, 실제 발송까지 맡기는 상황을 생각해볼 수 있습니다. 이때 보안 검토의 범위에는 답변의 정확성뿐 아니라 <strong>어떤 메일을 읽을 수 있는지, 누구에게 무엇을 보낼 수 있는지</strong>도 포함돼야 합니다. ENISA 역시 2026년 보고서에서 파일·인증정보·브라우저 세션 등에 접근하는 AI 애플리케이션과 주변 도구가 공격 대상이 되고 있다고 지적했습니다. 연결 기능이 늘어날수록 함께 보호해야 할 정보와 시스템도 많아지는 것입니다. <a href="https://www.enisa.europa.eu/publications/enisa-threat-landscape-2026">ENISA Threat Landscape 2026</a></p>
+<p>실제 침해 조사에서도 공격자의 AI 활용이 확인됩니다. 침해를 경험한 602개 조직을 조사한 IBM/Ponemon의 2026년 보고서에서는 <strong>조사 대상의 악의적 침해 중 약 25%에 AI가 활용됐으며, 해당 유형의 평균 침해 비용은 600만 달러</strong>로 나타났습니다. 딥페이크를 이용한 사칭과 AI를 활용한 악성코드 등이 대표적이었습니다. 특정 조사 표본의 결과이지만, 공격자의 AI 활용이 기업의 사고 대응과 비용 관리에서 고려해야 할 문제임을 보여줍니다. <a href="https://newsroom.ibm.com/2026-07-29-ibm-study-one-in-four-malicious-breaches-are-ai-enabled,-costing-companies-6-million-on-average">IBM 2026 공식 발표</a></p>
+<p>피해는 시스템을 복구하는 것으로 끝나지 않을 수 있습니다. 고객정보가 노출되면 유출 경위를 설명하고 재발 방지 조치를 입증해야 합니다. AI가 잘못된 안내를 반복하거나 승인 없이 업무를 처리했다면 서비스에 대한 신뢰도 흔들릴 수 있습니다. 따라서 AI 보안 검토에서는 복구 비용과 함께 업무 중단, 고객 대응, 계약 관계와 평판에 미치는 영향까지 살펴봐야 합니다.</p>
+<p>이런 변화에 대비하려면 <strong>우리 회사의 AI가 어떤 자료에 접근하고, 누구의 권한으로, 어디까지 실행할 수 있는지</strong>부터 파악해야 합니다. 같은 모델을 사용하더라도 사내 문서만 검색하는 AI와 고객 요청을 받아 내부 시스템을 변경하는 AI에는 서로 다른 통제가 필요합니다. 다음에서는 기업의 AI 도입 방식을 네 가지 구조로 나누어, 각각 어디에 보안의 초점을 맞춰야 하는지 살펴보겠습니다.</p>
+<h2>2. 기업의 AI 도입 방식, 네 가지 구조로 살펴봅니다</h2>
+<p>국정원의 「국가·공공기관 AI보안 가이드북」은 내부망 전용, 내부망용 AI의 외부망 연계, 대민서비스용 AI의 내부망 연계, 상용 AI서비스 활용을 구분해 다룹니다. <a href="https://www.nis.go.kr/AF/1_7_7_1.do">국정원 AI보안 자료</a> · <a href="https://nsp.nanet.go.kr/plan/subject/detail.do?nationalPlanControlNo=PLAN0000059314&amp;newReportChk=list">국회도서관의 가이드북 목차</a></p>
+<figure class="concept-visual">
+  <img class="concept-animation" src="/assets/uploads/enterprise-ai-deployment-types.png?v=20261001" data-concept-animation="/assets/uploads/enterprise-ai-deployment-types.webp?v=20261001" data-duration="28" width="1080" height="1540" alt="사내망 전용 AI, 사내 AI의 외부망 연계, 고객서비스 AI의 사내망 연계, 상용 AI 활용에서 달라지는 사내와 외부의 경계. 요청이 경계를 넘는 지점마다 확인·통제 지점이 있습니다.">
+</figure>
+<p><em>그림 2. 주요 요청 경로와 신뢰 경계를 단순화한 그림입니다. 실제 구성에서는 인증, 통신 통제, 응답 경로와 운영 로그를 더해 확인해야 합니다.</em></p>
+<div class="article-table-block article-table-block--wide">
+<p class="table-scroll-hint">표는 좌우로 움직여 볼 수 있습니다.</p>
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>도입 유형</th>
+<th>장점</th>
+<th>부담과 주의점</th>
+<th>먼저 검토할 만한 상황</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>사내망 전용 구축</td>
+<td>데이터 이동과 운영 환경을 직접 통제하기 좋음</td>
+<td>연산 자원·운영 인력·업데이트 비용, 내부 권한과 공급망 관리 필요</td>
+<td>외부 처리가 제한되는 데이터가 있고, 자체 운영 역량을 확보한 조직</td>
+</tr>
+<tr>
+<td>사내 AI의 외부망 연계</td>
+<td>사내 자료와 최신 외부 정보·기능을 함께 활용</td>
+<td>외부 자료의 악성 지시, 외부 전송 경로와 연결 도구 관리 필요</td>
+<td>내부 지식과 외부 웹·API를 결합해야 하는 조사·개발 업무</td>
+</tr>
+<tr>
+<td>고객서비스 AI의 사내망 연계</td>
+<td>고객 문의와 내부 업무 데이터를 연결해 서비스 제공</td>
+<td>외부 사용자의 입력이 내부 시스템에 닿음. 고객별 격리와 거래 권한이 중요</td>
+<td>주문·예약·계약 조회처럼 인증된 고객에게 내부 정보를 제공하는 서비스</td>
+</tr>
+<tr>
+<td>상용 AI 구독·API 활용</td>
+<td>초기 도입이 빠르고 모델·인프라 운영 부담이 작음</td>
+<td>공급자의 계약·보관·연동 정책, 비용과 변경사항에 의존</td>
+<td>일반 문서 업무나 빠른 검증, 승인된 클라우드 처리가 가능한 업무</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>이 유형은 완전히 배타적인 분류가 아닙니다. 사내 업무 앱에서 상용 모델 API를 호출하거나, 고객서비스의 일부만 사내 모델로 처리할 수도 있습니다. <strong>회사 규모보다 데이터의 민감도, 외부 처리 허용 여부, 필요한 연결, 운영 역량, 비용</strong>을 기준으로 선택하는 편이 좋습니다.</p>
+<p>예를 들어 일반 안내문 작성이 목적이라면 승인된 기업용 상용 서비스를 먼저 검토할 수 있습니다. 외부 반출이 어려운 핵심 기술문서를 분석해야 한다면 자체 구축이나 승인된 격리 환경을 검토할 수 있습니다. 이때도 통제 수준이 요구사항을 만족하는지 확인해야 하며, ‘대기업은 사내 구축, 중소기업은 상용 서비스’처럼 나눌 수는 없습니다.</p>
+<h2>3. AI 수명주기: 도입부터 운영을 끝낼 때까지</h2>
+<p>AI 보안 검토는 오픈 직전 한 번의 진단으로 끝나지 않습니다. NCSC의 지침을 따라 <strong>설계 → 개발 → 배포 → 운영·유지보수</strong>의 네 단계로 보면 책임과 점검 시점을 정리하기 쉽습니다. 이는 수명주기를 설명하는 한 가지 틀이며, 모든 지침이 같은 단계 수를 사용하는 것은 아닙니다. <a href="https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development">NCSC 안전한 AI 시스템 개발 지침</a></p>
+<div class="article-table-block article-table-block--wide">
+<p class="table-scroll-hint">표는 좌우로 움직여 볼 수 있습니다.</p>
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>주요 위협과 실수</th>
+<th>보안담당자가 확인할 결과물</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>설계</td>
+<td>목적에 비해 과도한 데이터·권한, 책임과 허용 범위의 누락</td>
+<td>업무 목적, 데이터 흐름도, 데이터 등급, 위협 시나리오, 책임자</td>
+</tr>
+<tr>
+<td>개발</td>
+<td>오염된 데이터·모델, 취약한 라이브러리, 코드·설정의 비밀키</td>
+<td>데이터 출처와 반영 기록, 구성요소 목록, 코드·비밀정보 검사 결과</td>
+</tr>
+<tr>
+<td>배포</td>
+<td>인증·인가 누락, 공개된 관리 화면, 시험용 권한의 운영 반영</td>
+<td>운영 권한표, 망·저장 설정, 승인·차단 시험, 복구·중단 절차</td>
+</tr>
+<tr>
+<td>운영·유지보수</td>
+<td>모델·문서·도구 변경에 따른 통제 약화, 기억 오염, 비용 폭증</td>
+<td>변경 전후 평가, 실행 기록, 이상 탐지, 권한 재검토, 사고 대응 훈련</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>상용 AI를 쓰는 기업도 이 과정에서 빠지지 않습니다. 모델 학습은 공급자가 맡더라도 서비스 선정, 계정 설정, 연결 권한, 입력 자료, 생성 결과를 사용하는 책임은 남습니다.</p>
+<p>운영 종료도 포함해야 합니다. 서비스를 해지할 때는 계정과 API 키, 외부 연동을 회수하고 대화·첨부파일·기억·검색 색인·백업의 처리 기준을 확인합니다. 서비스 화면에서 삭제되었는지와 공급자 시스템에서 어떤 일정으로 삭제되는지는 별개의 확인 항목입니다.</p>
+<h2>4. 도입 유형에 따라 중점 보안 설계가 달라집니다</h2>
+<h3>사내망 전용: 내부정보도 사람마다 읽을 자격이 다릅니다</h3>
+<p>외부 인터넷과 단절되어 있어도 모든 직원이 모든 정보를 읽어도 되는 것은 아닙니다. 일반 직원에게 임원 인사자료가 검색된다면, 정보가 사내에 머물렀더라도 권한 통제에 실패한 것입니다.</p>
+<p>특히 <strong>모델 학습과 문서 검색의 권한 관리</strong>를 구분해야 합니다. 공통 모델에 학습시킨 내용을 나중에 사용자별로 정확히 꺼내지 못하게 만드는 일은 문서 접근 권한을 적용하는 것과 다릅니다. “이 자료는 관리자용”이라고 모델에 지시하는 것만으로 인가를 보장할 수 없습니다.</p>
+<p>민감도가 다른 데이터를 하나의 모델에 학습시킬 필요가 있는지 먼저 검토합니다. 사내 자료를 검색해 답변에 활용하는 RAG를 쓴다면, 검색 단계에서 원본 문서의 사용자·조직별 권한을 적용하고 삭제·권한 회수도 색인과 캐시에 반영해야 합니다. 필요한 경우 데이터와 서비스 경계를 분리합니다.</p>
+<p><strong>점검 예시:</strong> 권한이 다른 두 계정으로 같은 문서를 질의합니다. 답변에서 가렸는지만 보지 말고 검색된 문서와 모델에 전달된 내용도 확인합니다. 모델·라이브러리 반입, 이동식 매체, 업데이트, 원격 유지보수와 외부 통신 설정도 함께 점검합니다. 격리된 운영 환경에도 공급망은 존재합니다.</p>
+<h3>사내 AI의 외부망 연계: 들어오는 자료와 나가는 정보를 함께 봅니다</h3>
+<p>외부 웹페이지나 메일에는 사람이 읽을 정보와 AI의 행동을 바꾸려는 지시가 함께 들어올 수 있습니다. 외부 자료를 읽게 했을 뿐인데 사내 자료를 전송하도록 유도된다면 프롬프트 인젝션과 연결 권한의 문제가 이어진 것입니다.</p>
+<p>외부 접속 목적지와 프로토콜을 정하고, 필요한 경로로만 통신하게 합니다. 연결할 도구·플러그인·MCP 서버의 출처와 권한을 승인하며, 쓰기·발송 기능은 읽기 기능과 구분합니다. MCP는 AI와 도구를 연결하는 방식이지 도구의 안전을 보증하는 표시가 아닙니다.</p>
+<p><strong>점검 예시:</strong> 테스트용 웹 문서에 업무와 관계없는 무해한 지시를 넣고, 원래 요청 밖의 검색·전송이 일어나는지 확인합니다. 외부 전송 차단을 시험할 때는 화면의 거절 문구뿐 아니라 프록시·도구 호출·수신 측 기록을 대조합니다. 허용 도메인으로 보냈더라도 허용되지 않은 파일을 전송했다면 문제가 남습니다.</p>
+<h3>고객서비스 AI의 사내망 연계: 내부 시스템 앞에 별도의 권한 검사가 필요합니다</h3>
+<p>고객용 챗봇이 내부 데이터베이스에 넓은 권한으로 직접 접근하게 만들면 외부 입력의 영향이 커집니다. 고객서비스 계층과 내부 업무 사이에 필요한 기능만 제공하는 API를 두고, 실제 요청자의 신원과 고객·조직 범위를 서버에서 검사해야 합니다.</p>
+<p>모델이 전달한 <code>고객번호</code>를 그대로 신뢰해서는 안 됩니다. 로그인한 고객에게 해당 주문을 조회하거나 변경할 권한이 있는지 업무 API가 다시 판단해야 합니다. 조회와 변경은 권한을 분리하고, 취소·환불처럼 중요한 거래에는 추가 확인과 중복 실행 방지 기준을 둡니다.</p>
+<p><strong>점검 예시:</strong> 고객 A의 시험 계정으로 고객 B의 주문번호를 질문하거나 도구 인자에 넣어봅니다. 다른 고객의 정보가 답변·첨부파일·세션 기억에 나타나지 않는지 확인합니다. 인증·인가, 입력 검증, 호출 제한, 세션 격리 같은 기존 애플리케이션 보안은 AI를 도입해도 그대로 필요합니다.</p>
+<h3>상용 AI 활용: ‘유료’보다 계약과 사용 범위가 중요합니다</h3>
+<p>개인이 결제한 유료 AI 계정과 회사가 관리하는 기업용 워크스페이스는 관리·데이터 처리 조건이 다를 수 있습니다. 서비스 이름만 승인할 것이 아니라 <strong>제품·요금제·계정·기능·허용 데이터 종류</strong>까지 정해야 합니다.</p>
+<p>검토하지 않은 개인용·상용 AI에 개인정보, 민감정보, 영업비밀, 내부 소스코드와 인증정보를 입력하지 않는 것을 기본으로 두는 편이 안전합니다. 승인된 기업용 서비스나 API에서도 모든 자료를 무조건 허용할 수는 없습니다. 업무 필요성, 처리 근거, 계약, 보관과 삭제, 국외 처리 여부, 하위 처리자, 관리자 접근, 사고 통지와 반출 조건을 확인해 허용 범위를 정합니다.</p>
+<p><strong>점검 예시:</strong> 조직이 승인한 워크스페이스에서 작업 중인지, 개인 공간으로 쉽게 전환해 자료를 올릴 수 있는지, 허가하지 않은 클라우드 드라이브 연결이 가능한지 확인합니다. 데이터 유출 방지 도구(DLP)나 업로드 경고는 보조 통제이며, 예외 승인과 점검 기록을 함께 운영해야 합니다.</p>
+<p>이 네 유형의 세부 위협은 <a href="/notes/owasp-llm-top-10-2026/">OWASP LLM Top 10 소개</a>와 연결해 점검할 수 있습니다. 목록의 번호를 확인하는 데서 멈추지 말고, 우리 서비스에서 누가 어떤 정보를 읽고 어디까지 실행할 수 있는지로 바꿔 질문해야 합니다.</p>
+<hr>
+<p><strong>다음 글:</strong> <a href="/notes/enterprise-ai-security-operations/">2편 — 안전한 활용과 운영</a></p>
+</div>
+      </article>
+    </main>
+    <footer><p>사이버보안 · 개인정보보호 · 정보보호 거버넌스</p><p>© 2026 Prifoxy. All rights reserved.</p><p><a href="#privacy" data-privacy-open aria-haspopup="dialog" aria-controls="privacy">개인정보 처리방침</a></p></footer>
+  <dialog id="privacy" class="privacy-dialog" aria-labelledby="privacy-title"><div class="privacy-dialog-heading" data-nosnippet><div><span>PRIVACY</span><h2 id="privacy-title">개인정보 처리방침</h2></div><button type="button" data-privacy-close aria-label="개인정보 처리방침 닫기" autofocus>닫기 <span aria-hidden="true">×</span></button></div><div class="privacy-dialog-content" data-nosnippet><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</div></dialog><noscript><section class="privacy-fallback" data-nosnippet><h2>개인정보 처리방침</h2><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</section></noscript>
+  </body>
+</html>
+
