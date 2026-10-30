@@ -1,0 +1,325 @@
+
+
+<!doctype html>
+<html lang="ko" class="has-article-toc">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; media-src 'self'; manifest-src 'self'; script-src 'self' https://challenges.cloudflare.com; connect-src https://laws-api.prifoxy.com; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#124a34">
+    <meta name="description" content="COBIT 5의 5가지 원칙과 거버넌스·관리의 관계를 살펴보고, 기업의 목표를 보안 업무의 책임·실행·성과로 연결하는 방법을 정리합니다.">
+    <link rel="canonical" href="https://prifoxy.com/notes/cobit-5-security-governance/">
+    <meta property="og:site_name" content="Prifoxy">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="COBIT 5 이해하기: 정보보호를 기업의 목표와 연결하는 방법">
+    <meta property="og:description" content="COBIT 5의 5가지 원칙과 거버넌스·관리의 관계를 살펴보고, 기업의 목표를 보안 업무의 책임·실행·성과로 연결하는 방법을 정리합니다.">
+    <meta property="og:url" content="https://prifoxy.com/notes/cobit-5-security-governance/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="COBIT 5 이해하기: 정보보호를 기업의 목표와 연결하는 방법">
+    <meta name="twitter:description" content="COBIT 5의 5가지 원칙과 거버넌스·관리의 관계를 살펴보고, 기업의 목표를 보안 업무의 책임·실행·성과로 연결하는 방법을 정리합니다.">
+    
+    <meta property="og:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta name="twitter:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+    <meta name="twitter:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+
+    <title>COBIT 5 이해하기: 정보보호를 기업의 목표와 연결하는 방법 | Prifoxy</title>
+    <script src="/assets/theme.js?v=a1fbe31f2050"></script>
+    <link rel="icon" href="/assets/favicon.svg?v=bdb9c835b634" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css?v=36dbf6ced577">
+  <link rel="stylesheet" href="/assets/mobile.css?v=1cc356585465">
+    <script src="/assets/privacy.js?v=20260906" defer></script>
+  <link rel="stylesheet" href="/assets/article-media.css?v=3d74dd9a9bb0">
+    <script src="/assets/article-media.js?v=f197b8ec14f3" defer></script>
+  <link rel="stylesheet" href="/assets/article-toc.css?v=dde28348bc2e">
+    <script src="/assets/article-toc.js?v=2fca8cc07def" defer></script>
+  <script src="/assets/pageviews.js?v=2aa0a6b6de25" defer></script>
+  </head>
+  <body>
+    
+    
+    <header class="site-header article-header">
+  <a class="wordmark" href="/" aria-label="Prifoxy 홈"><strong>Prifoxy</strong></a>
+  <nav aria-label="주요 메뉴">
+    <a href="/">Home</a>
+    <a href="/notes/" aria-current="page">Blog</a>
+    <a href="/projects/">Project</a>
+    <a href="/laws/">Laws</a>
+    <a href="/about/">About</a>
+  </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="다크 모드" aria-pressed="false" title="다크 모드로 전환" hidden>
+    <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.8 8.8 0 1 0 20.5 14.2Z"/></svg>
+    <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</header>
+
+    <main class="article-shell article-shell--wide article-shell--toc">
+      <aside class="article-rail article-rail--toc"><div class="article-rail-info"><p>글 정보</p><span>GRC</span><span>정보보호 거버넌스</span><span>2026년 10월 26일</span><a href="/notes/">Blog로 돌아가기 →</a></div>
+        
+        <div class="article-toc-track">
+        <details class="article-toc" data-article-toc open>
+          <summary>목차</summary>
+          <nav aria-label="이 글의 목차">
+            <h2 class="article-toc-title">목차</h2>
+            <ol>
+              
+              <li><a href="#section-cobit-5%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80">COBIT 5는 무엇인가?</a></li>
+              
+              <li><a href="#section-cobit-5%EB%A5%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EB%8A%94-5%EA%B0%80%EC%A7%80-%EC%9B%90%EC%B9%99">COBIT 5를 이해하는 5가지 원칙</a></li>
+              
+              <li><a href="#section-%EA%B1%B0%EB%B2%84%EB%84%8C%EC%8A%A4%EC%99%80-%EA%B4%80%EB%A6%AC%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8B%A4%EB%A5%B8%EA%B0%80">거버넌스와 관리는 어떻게 다른가?</a></li>
+              
+              <li><a href="#section-%EC%A0%95%EC%B1%85%EC%9D%B4-%EC%8B%A4%EC%A0%9C%EB%A1%9C-%EC%9E%91%EB%8F%99%ED%95%98%EB%A0%A4%EB%A9%B4-%ED%95%84%EC%9A%94%ED%95%9C-%EA%B2%83%EB%93%A4">정책이 실제로 작동하려면 필요한 것들</a></li>
+              
+              <li><a href="#section-%EA%B8%B0%EC%97%85%EC%9D%98-%EB%AA%A9%ED%91%9C%EB%A5%BC-%EB%B3%B4%EC%95%88-%EC%97%85%EB%AC%B4%EB%A1%9C-%EC%97%B0%EA%B2%B0%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95">기업의 목표를 보안 업무로 연결하는 방법</a></li>
+              
+              <li><a href="#section-%EB%B3%B4%EC%95%88%EB%8B%B4%EB%8B%B9%EC%9E%90%EB%8A%94-%EC%96%B4%EB%94%94%EB%B6%80%ED%84%B0-%EC%82%B4%ED%8E%B4%EB%B3%B4%EB%A9%B4-%EC%A2%8B%EC%9D%84%EA%B9%8C">보안담당자는 어디부터 살펴보면 좋을까?</a></li>
+              
+            </ol>
+          </nav>
+        </details>
+        </div>
+        
+      </aside>
+      <article class="prose">
+        <p class="library-kicker">정보보호 거버넌스</p>
+        <h1>COBIT 5 이해하기: 정보보호를 기업의 목표와 연결하는 방법</h1>
+        <p class="article-summary">COBIT 5의 5가지 원칙과 거버넌스·관리의 관계를 살펴보고, 기업의 목표를 보안 업무의 책임·실행·성과로 연결하는 방법을 정리합니다.</p>
+        <div class="article-meta"><span>2026년 10월 26일</span><span class="reading-time" data-nosnippet title="AI가 산정한 예상 읽기 시간: 약 9분" aria-label="예상 읽기 시간 약 9분"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6"></circle><path d="M8 4.5V8l2.5 1.5"></path></svg><span>9m</span></span></div>
+        <div class="article-content"><p>보안 정책을 만들고, 보안 솔루션을 도입하고, 정기적으로 취약점을 점검한다. 기업에서 흔히 수행하는 정보보호 활동이다.</p>
+<p>그런데 다음 질문에도 명확하게 답할 수 있을까?</p>
+<ul>
+<li>여러 보안 과제 중 무엇을 먼저 해결해야 하는가?</li>
+<li>개선에 필요한 예산과 인력은 누가 결정하는가?</li>
+<li>조치하지 못한 위험은 누가 검토하고 받아들이는가?</li>
+<li>우리가 수행한 보안 활동이 실제로 기업에 도움이 되었는가?</li>
+</ul>
+<p>이 질문들은 기술적인 조치와 함께 <strong>조직의 의사결정, 책임, 성과 관리</strong>를 다룬다. 정보보호 거버넌스를 이해할 때 COBIT을 살펴보는 이유도 여기에 있다.</p>
+<h2 id="section-cobit-5는-무엇인가" tabindex="-1">COBIT 5는 무엇인가?</h2>
+<p><strong>COBIT 5는 ISACA가 개발한 기업 IT의 거버넌스 및 관리 프레임워크다.</strong> 기업이 정보와 기술을 활용하면서 어떤 목표를 세우고, 누가 책임지며, 무엇을 관리하고 평가해야 하는지 체계적으로 정리한다.</p>
+<p>공식 명칭은 ‘COBIT 5’이며, 2012년에 발표됐다. 이후 후속 버전인 COBIT 2019가 나왔다. 이 글에서는 COBIT 5의 개념과 구조를 기준으로 설명한다. <a href="https://www.isaca.org/resources/news-and-trends/industry-news/2020/cobit-2019-and-cobit-5-comparison">ISACA — COBIT 2019 and COBIT 5 Comparison</a></p>
+<p>COBIT 5가 다루는 범위는 정보보호를 포함한 기업 IT 전반이다. IT 투자, 서비스 운영, 조직과 인력, 위험관리, 내부통제 등도 함께 살펴본다.</p>
+<p>그 중심에는 <strong>기업이 IT를 통해 가치를 얻어야 한다</strong>는 관점이 있다. 이때 가치는 다음 세 가지를 균형 있게 고려한다.</p>
+<div class="article-table-block">
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>관점</th>
+<th>기업이 확인해야 할 질문</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>편익 실현</td>
+<td>정보와 기술이 업무와 사업에 어떤 도움을 주는가?</td>
+</tr>
+<tr>
+<td>위험 최적화</td>
+<td>목표 달성을 방해하는 위험을 적절하게 관리하고 있는가?</td>
+</tr>
+<tr>
+<td>자원 최적화</td>
+<td>예산·인력·시스템을 필요한 곳에 적절하게 활용하고 있는가?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>보안에서도 같은 질문을 적용할 수 있다. 시스템의 중요도와 위험, 업무에 미치는 영향, 사용할 수 있는 자원을 함께 검토해야 투자와 통제의 우선순위를 정할 수 있다. <a href="https://www.isaca.org/resources/isaca-journal/issues/2016/volume-1/how-to-be-the-most-wanted-is-auditor">ISACA — How to Be the Most Wanted IS Auditor</a></p>
+<h2 id="section-cobit-5를-이해하는-5가지-원칙" tabindex="-1">COBIT 5를 이해하는 5가지 원칙</h2>
+<p>COBIT 5는 다음 다섯 가지 원칙을 바탕으로 한다. 표의 설명은 이해를 돕기 위해 풀어 쓴 것이다. <a href="https://www.isaca.org/bookstore/bookstore-wht_papers-digital/-/media/ecad2355312d4918b951361947d5f082.ashx">ISACA — Connecting Privacy Activities With COBIT 5 Principles</a></p>
+<div class="article-table-block">
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>원칙</th>
+<th>쉽게 이해하기</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>이해관계자의 요구 충족</strong></td>
+<td>고객, 임직원, 경영진 등 이해관계자의 요구를 파악하고 조직의 목표에 반영한다.</td>
+</tr>
+<tr>
+<td><strong>기업 전체를 포괄</strong></td>
+<td>정보와 기술에 관한 책임을 IT 부서 안에 한정하지 않고 사업부서와 경영진까지 연결한다.</td>
+</tr>
+<tr>
+<td><strong>단일 통합 프레임워크 적용</strong></td>
+<td>여러 표준과 관리체계를 공통된 틀에서 연결해 활용한다.</td>
+</tr>
+<tr>
+<td><strong>총체적 접근</strong></td>
+<td>프로세스뿐 아니라 사람, 조직, 문화, 정보, 기술을 함께 살펴본다.</td>
+</tr>
+<tr>
+<td><strong>거버넌스와 관리의 구분</strong></td>
+<td>방향을 정하고 감독하는 역할과, 그 방향에 맞춰 계획하고 실행하는 역할을 구분한다.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>정보보호 업무에 대입하면 의미가 더 분명해진다.</p>
+<p>고객정보 보호라는 목표에는 보안팀뿐 아니라 정보를 수집하는 사업부서, 시스템을 운영하는 IT 부서, 인사·법무 조직, 예산을 결정하는 경영진이 관여한다. 따라서 보안 정책을 제대로 실행하려면 <strong>여러 조직의 역할과 책임이 연결되어야 한다.</strong></p>
+<p>또한 ‘단일 통합 프레임워크’는 다른 표준을 없앤다는 뜻이 아니다. 조직이 이미 활용하는 표준과 관리체계를 연결하고, 서로 다른 활동이 같은 목표를 향하도록 정리하는 관점이다.</p>
+<h2 id="section-거버넌스와-관리는-어떻게-다른가" tabindex="-1">거버넌스와 관리는 어떻게 다른가?</h2>
+<p>COBIT 5에서 중요한 구분이 <strong>거버넌스와 관리</strong>다. 거버넌스는 이해관계자의 요구와 선택지를 평가하고, 우선순위와 방향을 결정하며, 결과를 감독한다. 관리는 정해진 방향에 따라 업무를 계획하고, 시스템을 구축하고, 서비스를 운영하며, 결과를 점검한다. <a href="https://www.isaca.org/resources/news-and-trends/industry-news/2017/using-cobit-in-government-departments">ISACA — Using COBIT in Government Departments</a></p>
+<figure class="concept-visual cobit-visual">
+  <picture>
+    <source media="(max-width: 1100px)" srcset="/assets/uploads/cobit5-governance-management-mobile.svg" width="400" height="716">
+    <img src="/assets/uploads/cobit5-governance-management.svg" width="900" height="550" loading="lazy" decoding="async" alt="거버넌스는 평가·방향 제시·감독을 수행하는 EDM 영역입니다. 거버넌스에서 관리로 방향·우선순위·자원을 전달하고, APO·BAI·DSS·MEA로 구성된 관리에서 거버넌스로 성과·위험·개선 정보를 전달합니다.">
+  </picture>
+  <figcaption>그림 1. 방향과 실행을 연결하는 관계. 관리에서 확인한 성과와 위험은 다음 의사결정에 반영된다.</figcaption>
+</figure>
+<p>중요한 시스템의 관리자 계정을 보호하는 경우를 생각해 보자. 어떤 시스템을 우선 보호할지, 자원을 어떻게 배분할지, 남은 위험을 어느 수준까지 받아들일지 판단하고 감독하는 것은 거버넌스의 관점이다. 계정을 조사하고, 인증과 권한 기준을 정해 적용하며, 예외 계정과 접속 기록을 점검하는 것은 관리의 관점이다.</p>
+<p>담당자가 위험을 발견해도 결정할 사람이 없거나, 경영진이 방향을 정해도 실행할 담당자가 없다면 개선은 멈춘다. COBIT 5의 역할 구분은 이런 공백을 살펴보는 데 도움이 된다.</p>
+<p>이 구조는 <strong>5개 도메인과 37개 프로세스</strong>로 구체화된다. 여기서 도메인은 관련 업무를 묶은 영역이다. <a href="https://www.isaca.org/resources/isaca-journal/issues/2019/volume-1/the-four-questions-for-successful-dlp-implementation">ISACA — The Four Questions for Successful DLP Implementation</a></p>
+<div class="article-table-block article-table-block--wide">
+<p class="table-scroll-hint">표는 좌우로 움직여 볼 수 있습니다.</p>
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>도메인</th>
+<th>주요 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>거버넌스</td>
+<td><strong>EDM — 평가·방향 제시·감독</strong></td>
+<td>기업의 방향, 가치, 위험, 자원에 관한 의사결정과 감독</td>
+</tr>
+<tr>
+<td>관리</td>
+<td><strong>APO — 정렬·계획·조직화</strong></td>
+<td>기업 목표와 IT의 연계, 전략, 조직, 위험 및 보안관리 계획</td>
+</tr>
+<tr>
+<td>관리</td>
+<td><strong>BAI — 구축·획득·구현</strong></td>
+<td>시스템과 서비스의 도입·구축, 변경 관리</td>
+</tr>
+<tr>
+<td>관리</td>
+<td><strong>DSS — 제공·서비스·지원</strong></td>
+<td>일상적인 서비스 운영, 사고 대응, 연속성 및 보안 서비스</td>
+</tr>
+<tr>
+<td>관리</td>
+<td><strong>MEA — 모니터링·평가·검토</strong></td>
+<td>성과, 내부통제, 외부 요구사항 준수 여부의 평가</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>처음부터 37개 프로세스를 외우기보다는, <strong>내가 맡은 업무가 어느 영역에 속하고 어떤 의사결정과 연결되는지</strong> 살펴보면 구조를 이해하기 쉽다. <a href="https://www.isaca.org/resources/news-and-trends/industry-news/2016/using-cobit-for-it-organizational-design">ISACA — Using COBIT for IT Organizational Design</a></p>
+<h2 id="section-정책이-실제로-작동하려면-필요한-것들" tabindex="-1">정책이 실제로 작동하려면 필요한 것들</h2>
+<p>정책 문서에 “불필요한 접근권한을 회수한다”라고 적혀 있어도, 퇴사 사실이 운영팀에 전달되지 않거나 계정 목록이 부정확하면 실행하기 어렵다.</p>
+<p>COBIT 5는 거버넌스와 관리가 작동하도록 돕는 **7가지 요소를 ‘인에이블러(enabler)’**라고 부른다. 아래 접근권한 관리 예시는 각 요소의 의미를 설명하기 위해 구성했다. <a href="https://www.isaca.org/resources/isaca-journal/issues/2021/volume-2/giving-it-governance-its-real-value">ISACA — Giving IT Governance Its Real Value</a></p>
+<div class="article-table-block">
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>요소</th>
+<th>접근권한 관리에 적용한 예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>원칙·정책·프레임워크</strong></td>
+<td>권한 부여와 회수의 기준을 정한다.</td>
+</tr>
+<tr>
+<td><strong>프로세스</strong></td>
+<td>신청 → 승인 → 부여 → 검토 → 회수 절차를 운영한다.</td>
+</tr>
+<tr>
+<td><strong>조직구조</strong></td>
+<td>요청자, 승인자, 처리자, 점검자의 책임을 정한다.</td>
+</tr>
+<tr>
+<td><strong>문화·윤리·행동</strong></td>
+<td>계정 공유나 승인 우회를 당연하게 여기지 않는다.</td>
+</tr>
+<tr>
+<td><strong>정보</strong></td>
+<td>인사 변동, 시스템 목록, 계정과 권한 현황을 정확하게 유지한다.</td>
+</tr>
+<tr>
+<td><strong>서비스·인프라·애플리케이션</strong></td>
+<td>계정 관리 시스템과 인증·로그 기능을 운영한다.</td>
+</tr>
+<tr>
+<td><strong>사람·숙련도·역량</strong></td>
+<td>담당자가 업무와 시스템을 이해하고 예외 상황을 처리할 수 있게 한다.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>이 관점으로 보면 반복되는 권한 회수 누락을 조사할 때 확인할 범위도 넓어진다. 도구의 기능뿐 아니라 인사정보 전달 과정, 승인 책임, 예외 처리, 담당자의 업무 부담까지 살펴볼 수 있다.</p>
+<h2 id="section-기업의-목표를-보안-업무로-연결하는-방법" tabindex="-1">기업의 목표를 보안 업무로 연결하는 방법</h2>
+<p>COBIT 5에는 **목표 연계 체계, 즉 목표 캐스케이드(goals cascade)**라는 개념이 있다.</p>
+<p>이해관계자의 요구를 기업의 목표로 구체화하고, 이를 IT 관련 목표와 실행을 가능하게 하는 요소들의 목표로 연결한다. 보안담당자에게는 “이 통제가 왜 필요한가?”를 기업의 관점에서 설명하는 방법이 된다. <a href="https://www.isaca.org/resources/isaca-journal/issues/2016/volume-5/preparing-financial-firms-for-cybersecurity-threats-and-protecting-their-reputations">ISACA — Preparing Financial Firms for Cybersecurity Threats and Protecting Their Reputations</a></p>
+<figure class="concept-visual cobit-visual">
+  <picture>
+    <source media="(max-width: 1100px)" srcset="/assets/uploads/cobit5-goals-cascade-mobile.svg" width="400" height="854">
+    <img src="/assets/uploads/cobit5-goals-cascade.svg" width="900" height="450" loading="lazy" decoding="async" alt="목표 연결의 예시. 고객정보를 안전하게 보호하려는 이해관계자의 요구가 고객 신뢰와 안정적인 서비스라는 기업 목표, 부적절한 정보 접근 위험 감소라는 IT 관련 목표, 정해진 기준 안에 권한을 회수하고 완료 여부를 확인하는 실행 요소의 목표로 이어집니다.">
+  </picture>
+  <figcaption>그림 2. 접근권한 관리를 예로 든 목표 연결. 설명을 위해 구성했으며 공식 목표 목록을 그대로 옮긴 것은 아니다.</figcaption>
+</figure>
+<p>이를 퇴사자 계정 관리에 적용한다면, 목표 달성에 필요한 절차·책임·정보·시스템을 다음과 같이 구체화할 수 있다.</p>
+<ul>
+<li><strong>기준:</strong> 퇴사 시점과 시스템의 중요도를 고려해 권한 회수 기준을 정한다.</li>
+<li><strong>책임:</strong> 인사 변동 통보, 계정 회수, 완료 확인을 담당할 조직을 정한다.</li>
+<li><strong>증거:</strong> 회수 요청과 처리 기록, 계정 상태를 확인할 수 있도록 남긴다.</li>
+<li><strong>측정:</strong> 기준 시간 내 회수율, 미회수 계정 수, 예외 승인 기한 초과 건수 등을 점검한다.</li>
+<li><strong>개선:</strong> 누락 원인을 분석해 절차나 시스템 연계를 보완한다.</li>
+</ul>
+<p>이렇게 연결하면 “계정을 몇 개 정리했다”는 작업 결과에서 한 걸음 더 나아가, <strong>기업이 우려하는 위험을 얼마나 줄였는지</strong> 설명할 수 있다.</p>
+<h2 id="section-보안담당자는-어디부터-살펴보면-좋을까" tabindex="-1">보안담당자는 어디부터 살펴보면 좋을까?</h2>
+<p>COBIT 5에서 정보보호와 직접 연결되는 프로세스 중 하나는 <strong>APO13 — 보안관리</strong>다. 주요 내용은 다음과 같다.</p>
+<ol>
+<li>정보보호관리체계를 수립하고 유지한다.</li>
+<li>정보보호 위험처리 계획을 정의하고 관리한다.</li>
+<li>정보보호관리체계를 모니터링하고 검토한다.</li>
+</ol>
+<p>관련 산출물에는 정책과 적용 범위, 위험처리 계획, 감사 보고서, 개선 권고 등이 포함된다. 보안 활동이 정책 수립부터 운영과 평가까지 이어져야 한다는 점을 보여준다. <a href="https://www.isaca.org/resources/news-and-trends/industry-news/2018/geit-framework-at-work-part-2-plan-the-solution">ISACA — GEIT Framework at Work, Part 2</a></p>
+<p>실무에서는 현재 반복해서 발생하는 문제 하나를 골라 적용해 볼 수 있다. 권한 회수 지연, 자산 목록 누락, 취약점 조치 지연처럼 익숙한 문제면 충분하다.</p>
+<p>그 문제에 대해 <strong>어떤 기업 목표에 영향을 주는지, 누가 결정하고 실행하는지, 무엇으로 개선 여부를 확인할지</strong> 정리해 보자. COBIT 5의 구조를 활용하면 개별 보안 업무와 조직의 책임, 의사결정, 성과 사이의 연결을 더 분명하게 만들 수 있다.</p>
+</div>
+      </article>
+    </main>
+    <footer><p>사이버보안 · 개인정보보호 · 정보보호 거버넌스</p><p>© 2026 Prifoxy. All rights reserved.</p><p><a href="#privacy" data-privacy-open aria-haspopup="dialog" aria-controls="privacy">개인정보 처리방침</a></p></footer>
+  <dialog id="privacy" class="privacy-dialog" aria-labelledby="privacy-title"><div class="privacy-dialog-heading" data-nosnippet><div><span>PRIVACY</span><h2 id="privacy-title">개인정보 처리방침</h2></div><button type="button" data-privacy-close aria-label="개인정보 처리방침 닫기" autofocus>닫기 <span aria-hidden="true">×</span></button></div><div class="privacy-dialog-content" data-nosnippet><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</div></dialog><noscript><section class="privacy-fallback" data-nosnippet><h2>개인정보 처리방침</h2><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</section></noscript>
+  </body>
+</html>
+

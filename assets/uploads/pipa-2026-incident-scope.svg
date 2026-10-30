@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="390" viewBox="0 0 760 706" role="img" aria-labelledby="title desc">
+  <title id="title">개인정보 사고 대응 범위 확대</title>
+  <desc id="desc">기존 분실, 도난, 유출에 더해 위조, 변조, 훼손도 개인정보 사고 통지·신고 대상 범위에 포함됩니다. 개별 통지·신고 요건은 법령에 따릅니다.</desc>
+  <rect width="760" height="706" rx="28" fill="#f6f5ed"/>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif" transform="translate(0 -54)">
+    <text x="44" y="113" font-size="42" font-weight="700" fill="#173e30">개인정보가 바뀌거나</text>
+    <text x="44" y="164" font-size="42" font-weight="700" fill="#173e30">훼손된 사고까지 살핍니다</text>
+    <text x="44" y="223" font-size="29" font-weight="700" fill="#51685c">기존 대상</text>
+    <g fill="#fff" stroke="#dadfd8" stroke-width="2"><rect x="32" y="245" width="218" height="164" rx="20"/><rect x="271" y="245" width="218" height="164" rx="20"/><rect x="510" y="245" width="218" height="164" rx="20"/></g>
+    <g fill="none" stroke="#637b6e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M110 273h38l13 13v41h-51zM148 273v15h13"/><path d="M129 288c0-10 19-10 19 0 0 7-9 6-9 14"/><circle cx="139" cy="314" r="2" fill="#637b6e"/>
+      <rect x="352" y="294" width="54" height="39" rx="7"/><path d="M363 294v-13c0-20 34-20 34 0M379 307v12"/>
+      <path d="M597 273h41v61h-41zM619 303h42m-12-13 13 13-13 13"/>
+    </g>
+    <text x="141" y="383" text-anchor="middle" font-size="34" font-weight="700" fill="#354d40">분실</text>
+    <text x="380" y="383" text-anchor="middle" font-size="34" font-weight="700" fill="#354d40">도난</text>
+    <text x="619" y="383" text-anchor="middle" font-size="34" font-weight="700" fill="#354d40">유출</text>
+    <circle cx="380" cy="448" r="22" fill="#235d43"/><path d="M370 448h20m-10-10v20" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <text x="44" y="500" font-size="29" font-weight="700" fill="#235d43">새로 포함</text>
+    <g fill="#e1efe3" stroke="#85ac91" stroke-width="2"><rect x="32" y="521" width="218" height="164" rx="20"/><rect x="271" y="521" width="218" height="164" rx="20"/><rect x="510" y="521" width="218" height="164" rx="20"/></g>
+    <g fill="none" stroke="#235d43" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="106" y="552" width="42" height="49" rx="4"/><path d="M118 543h42v49M117 564h17M117 576h17M117 588h12"/>
+      <path d="M350 550h42v58h-42zM361 564h13M361 577h9M378 601l4-15 23-23 10 10-23 23zM399 569l10 10"/>
+      <path d="M594 546h43v62h-43zM615 546l-9 20 18 8-15 18 7 16"/>
+    </g>
+    <text x="141" y="659" text-anchor="middle" font-size="34" font-weight="700" fill="#173e30">위조</text>
+    <text x="380" y="659" text-anchor="middle" font-size="34" font-weight="700" fill="#173e30">변조</text>
+    <text x="619" y="659" text-anchor="middle" font-size="34" font-weight="700" fill="#173e30">훼손</text>
+    <text x="44" y="729" font-size="27" fill="#4b6155">개별 통지·신고 요건은 법령에 따릅니다.</text>
+  </g>
+</svg>
