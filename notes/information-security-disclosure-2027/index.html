@@ -1,0 +1,172 @@
+
+
+<!doctype html>
+<html lang="ko" class="has-article-toc">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; media-src 'self'; manifest-src 'self'; script-src 'self' https://challenges.cloudflare.com; connect-src https://laws-api.prifoxy.com; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#124a34">
+    <meta name="description" content="2027년부터 코스피·코스닥 상장법인의 매출액 3,000억 원 기준이 폐지되고 ISMS 인증 의무대상자가 추가됩니다. 소기업 유예, 공시 준비와 제출처, 미이행 시 과태료를 정리합니다.">
+    <link rel="canonical" href="https://prifoxy.com/notes/information-security-disclosure-2027/">
+    <meta property="og:site_name" content="Prifoxy">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="2027년 정보보호 공시 의무 확대와 기업의 준비 사항">
+    <meta property="og:description" content="2027년부터 코스피·코스닥 상장법인의 매출액 3,000억 원 기준이 폐지되고 ISMS 인증 의무대상자가 추가됩니다. 소기업 유예, 공시 준비와 제출처, 미이행 시 과태료를 정리합니다.">
+    <meta property="og:url" content="https://prifoxy.com/notes/information-security-disclosure-2027/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2027년 정보보호 공시 의무 확대와 기업의 준비 사항">
+    <meta name="twitter:description" content="2027년부터 코스피·코스닥 상장법인의 매출액 3,000억 원 기준이 폐지되고 ISMS 인증 의무대상자가 추가됩니다. 소기업 유예, 공시 준비와 제출처, 미이행 시 과태료를 정리합니다.">
+    
+    <meta property="og:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta name="twitter:image" content="https://prifoxy.com/assets/prifoxy-preview-01873dc0c260.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+    <meta name="twitter:image:alt" content="Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스">
+
+    <title>2027년 정보보호 공시 의무 확대와 기업의 준비 사항 | Prifoxy</title>
+    <script src="/assets/theme.js?v=a1fbe31f2050"></script>
+    <link rel="icon" href="/assets/favicon.svg?v=bdb9c835b634" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles.css?v=36dbf6ced577">
+  <link rel="stylesheet" href="/assets/mobile.css?v=1cc356585465">
+    <script src="/assets/privacy.js?v=20260906" defer></script>
+  <link rel="stylesheet" href="/assets/article-media.css?v=3d74dd9a9bb0">
+    <script src="/assets/article-media.js?v=f197b8ec14f3" defer></script>
+  <link rel="stylesheet" href="/assets/article-toc.css?v=dde28348bc2e">
+    <script src="/assets/article-toc.js?v=2fca8cc07def" defer></script>
+  <script src="/assets/pageviews.js?v=2aa0a6b6de25" defer></script>
+  </head>
+  <body>
+    
+    
+    <header class="site-header article-header">
+  <a class="wordmark" href="/" aria-label="Prifoxy 홈"><strong>Prifoxy</strong></a>
+  <nav aria-label="주요 메뉴">
+    <a href="/">Home</a>
+    <a href="/notes/" aria-current="page">Blog</a>
+    <a href="/projects/">Project</a>
+    <a href="/laws/">Laws</a>
+    <a href="/about/">About</a>
+  </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="다크 모드" aria-pressed="false" title="다크 모드로 전환" hidden>
+    <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.8 8.8 0 1 0 20.5 14.2Z"/></svg>
+    <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</header>
+
+    <main class="article-shell article-shell--wide article-shell--toc">
+      <aside class="article-rail article-rail--toc"><div class="article-rail-info"><p>글 정보</p><span>GRC</span><span>정보보호 거버넌스</span><span>2026년 11월 1일</span><a href="/notes/">Blog로 돌아가기 →</a></div>
+        
+        <div class="article-toc-track">
+        <details class="article-toc" data-article-toc open>
+          <summary>목차</summary>
+          <nav aria-label="이 글의 목차">
+            <h2 class="article-toc-title">목차</h2>
+            <ol>
+              
+              <li><a href="#section-%EA%B8%B0%EC%A1%B4-%EA%B8%B0%EC%A4%80%EA%B3%BC-%EB%AC%B4%EC%97%87%EC%9D%B4-%EB%8B%AC%EB%9D%BC%EC%A7%80%EB%82%98%EC%9A%94">기존 기준과 무엇이 달라지나요</a></li>
+              
+              <li><a href="#section-%EC%A0%81%EC%9A%A9-%EC%9C%A0%EC%98%88%EC%99%80-%EC%98%88%EC%99%B8%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94">적용 유예와 예외는 무엇인가요</a></li>
+              
+              <li><a href="#section-%EB%AC%B4%EC%97%87%EC%9D%84-%EC%A4%80%EB%B9%84%ED%95%98%EA%B3%A0-%EC%96%B4%EB%94%94%EC%97%90-%EC%A0%9C%EC%B6%9C%ED%95%98%EB%82%98%EC%9A%94">무엇을 준비하고 어디에 제출하나요</a></li>
+              
+              <li><a href="#section-%EA%B3%B5%EC%8B%9C%ED%95%98%EC%A7%80-%EC%95%8A%EC%9C%BC%EB%A9%B4-%EC%96%B4%EB%96%A4-%EC%A0%9C%EC%9E%AC%EB%A5%BC-%EB%B0%9B%EB%82%98%EC%9A%94">공시하지 않으면 어떤 제재를 받나요</a></li>
+              
+            </ol>
+          </nav>
+        </details>
+        </div>
+        
+      </aside>
+      <article class="prose">
+        <p class="library-kicker">정보보호 거버넌스</p>
+        <h1>2027년 정보보호 공시 의무 확대와 기업의 준비 사항</h1>
+        <p class="article-summary">2027년부터 코스피·코스닥 상장법인의 매출액 3,000억 원 기준이 폐지되고 ISMS 인증 의무대상자가 추가됩니다. 소기업 유예, 공시 준비와 제출처, 미이행 시 과태료를 정리합니다.</p>
+        <div class="article-meta"><span>2026년 11월 1일</span><span class="reading-time" data-nosnippet title="AI가 산정한 예상 읽기 시간: 약 5분" aria-label="예상 읽기 시간 약 5분"><svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6"></circle><path d="M8 4.5V8l2.5 1.5"></path></svg><span>5m</span></span></div>
+        <div class="article-content"><p><strong>2027년 1월 1일부터 정보보호 공시 의무대상이 확대됩니다.</strong> 핵심은 <strong class="policy-key">상장법인의 매출액 3,000억 원 요건 폐지</strong>와 <strong>ISMS 인증 의무대상자 추가</strong>입니다. 관련 시행령은 2026년 10월 27일 공포됐습니다. <a href="https://www.law.go.kr/lsInfoP.do?lsiSeq=291485">개정 시행령 및 부칙</a></p>
+<p>정보보호 공시는 기업이 보안에 투입한 <strong>투자·인력</strong>, 보안 관련 <strong>인증·평가·점검</strong>, <strong>보호 활동</strong>을 공개하는 제도입니다. 고객과 투자자가 기업의 보안 노력을 확인할 수 있도록 하는 것이 목적입니다. <a href="https://isds.kisa.or.kr/kr/subPage.do?menuNo=204924">KISA 제도 안내</a></p>
+<h2 id="section-기존-기준과-무엇이-달라지나요" tabindex="-1">기존 기준과 무엇이 달라지나요</h2>
+<p>여기서 말하는 <strong>상장법인은 코스피(KOSPI) 또는 코스닥(KOSDAQ)에 주식이 상장된 법인</strong>입니다.</p>
+<div class="article-table-block article-table-block--wide">
+<p class="table-scroll-hint">표는 좌우로 움직여 볼 수 있습니다.</p>
+<div class="article-table-scroll" role="region" aria-label="표" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>기존 기준</th>
+<th>2027년 1월 1일부터</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>상장법인</td>
+<td>CISO 지정·신고 의무가 있는 상장법인 중 직전 사업연도 매출액 <strong>3,000억 원 이상</strong></td>
+<td>매출액과 CISO 지정·신고 요건을 삭제해 <strong>코스피·코스닥 전체 상장법인</strong>으로 확대. SPAC 제외</td>
+</tr>
+<tr>
+<td>ISMS 인증 의무대상자</td>
+<td>인증 의무자라는 사유만으로는 대상이 아니며, 다른 공시 기준 충족 여부로 판단</td>
+<td>정보통신망법 제47조제2항의 <strong>ISMS 인증 의무대상자를 별도 기준으로 추가</strong></td>
+</tr>
+<tr>
+<td>공공기관·금융회사 등</td>
+<td>공공기관, 금융회사, 일정 요건의 소기업·전자금융업자 제외</td>
+<td>기존 제외 규정 삭제. <strong>상장 여부·ISMS 의무 등 공시 기준에 해당하면 대상</strong></td>
+</tr>
+<tr>
+<td>이용자 수</td>
+<td>전년도 말 직전 <strong>3개월간</strong> 일일평균 100만 명 이상</td>
+<td>전년도 <strong>전체 기간</strong> 일일평균 100만 명 이상</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>회선설비 보유 기간통신사업자, 집적정보통신시설 사업자, 상급종합병원, 법령에서 정한 클라우드컴퓨팅서비스 제공자에 대한 기존 업종 기준도 유지됩니다. 따라서 <strong>비상장기업도 공시 의무대상이 될 수 있습니다.</strong> <a href="https://law.go.kr/LSW/lsRvsDocListP.do?chrClsCd=010102&amp;lsId=012401">시행령 제8조 개정문</a></p>
+<p>ISMS는 기업의 정보보호 관리체계를 심사하는 인증입니다. 이번에 추가된 기준은 <strong>인증을 의무적으로 받아야 하는 자</strong>에 관한 것으로, 자율적으로 인증을 받은 모든 기업을 뜻하지는 않습니다.</p>
+<h2 id="section-적용-유예와-예외는-무엇인가요" tabindex="-1">적용 유예와 예외는 무엇인가요</h2>
+<p><strong class="policy-condition">소기업은 2029년 1월 1일부터 공시 의무가 적용됩니다.</strong> 「중소기업기본법 시행령」 제8조제1항의 소기업이 대상이며, <strong>중소기업 전체에 주어지는 유예는 아닙니다.</strong> KISA는 소기업 확인을 위해 중소기업현황정보시스템에서 발급한 확인서를 제출하도록 안내하고 있습니다. <a href="https://www.law.go.kr/lsInfoP.do?lsiSeq=291485">개정 시행령 부칙 제2조</a> · <a href="https://isds.kisa.or.kr/kr/subPage.do?menuNo=204924">KISA 소기업 안내</a></p>
+<p><strong>기업인수목적회사</strong>(SPAC)는 상장법인 기준에서 제외됩니다. 또한 공공기관·금융회사라는 이유만으로 모두 자동 편입되는 것은 아닙니다. 종전의 제외 규정이 없어지므로 <strong>각 기관·회사가 공시 의무 기준에 해당하는지 다시 판단해야 합니다.</strong> <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148973964">과기정통부 개정 안내</a></p>
+<p>다른 법률에 따라 정보보호 현황을 공시하는 자에 대한 법률상 제외 규정도 남아 있습니다. 해당 여부는 실제 공시 내용과 법적 근거를 확인해야 합니다. <a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%82%B0%EC%97%85%EC%9D%98%EC%A7%84%ED%9D%A5%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0/%EC%A0%9C13%EC%A1%B0">정보보호산업법 제13조제2항</a></p>
+<h2 id="section-무엇을-준비하고-어디에-제출하나요" tabindex="-1">무엇을 준비하고 어디에 제출하나요</h2>
+<p>공시 기한은 <strong class="policy-key">매년 6월 30일</strong>입니다. 공시 내용은 직전년도 실적이므로, 2027년부터 의무가 적용되는 기업은 <strong>2026년의 투자·인력·인증·활동 자료를 정리해 2027년 6월 30일까지 제출</strong>할 준비를 해야 합니다. <a href="https://www.law.go.kr/lsInfoP.do?lsiSeq=291485">시행령 제8조</a> · <a href="https://www.msit.go.kr/bbs/view.do?sCode=user&amp;mPid=103&amp;mId=108&amp;nttSeqNo=3186445&amp;bbsSeqNo=83">정보보호 공시에 관한 고시 제2026-58호 및 첨부 전문</a></p>
+<p>준비는 다음 순서로 진행하면 됩니다.</p>
+<ol>
+<li><strong>대상 여부와 담당자 확정</strong> — 상장 여부, ISMS 인증 의무, 업종·이용자 수, 소기업 유예를 확인합니다. 보안부서와 재무·회계·인사·IT 부서의 자료 담당자를 정합니다.</li>
+<li><strong>실적과 산출 근거 수집</strong> — IT 투자액 대비 정보보호 투자액, IT 인력 대비 정보보호 전담인력, 인증·평가·점검 내역, 교육·훈련 등 보호 활동을 모읍니다. 계약·회계자료, 인력 산정 근거, 활동 결과를 함께 보관합니다.</li>
+<li><strong>공시 양식 작성과 확인</strong> — 최신 고시·가이드라인의 산정 기준에 맞춰 작성합니다. 법령상 공시는 <strong>CISO 주관으로 진행하고, 공시 전 최고경영자의 확인</strong>을 받아야 합니다.</li>
+<li><strong>포털 등록과 후속 대응</strong> — <a href="https://isds.kisa.or.kr/">KISA 정보보호 공시 종합 포털</a>의 <strong>정보보호공시현황 → 공시등록</strong>에서 제출합니다. 이후 내용 검증과 수정 요청에도 대응할 수 있도록 담당자와 근거자료를 유지합니다.</li>
+</ol>
+<p>일반적인 기업공시와 별개로 <strong>KISA 포털의 공시 절차</strong>를 확인하고, 서식은 2027년 시행 개정사항을 반영한 최신본을 사용합니다. <a href="https://isds.kisa.or.kr/kr/subPage.do?menuNo=204924">KISA 제출 안내</a></p>
+<h2 id="section-공시하지-않으면-어떤-제재를-받나요" tabindex="-1">공시하지 않으면 어떤 제재를 받나요</h2>
+<p>의무대상자가 정보보호 현황을 공시하지 않으면 <strong class="policy-condition">1,000만 원 이하의 과태료</strong>가 부과됩니다. 형사처벌인 벌금과는 구분되는 행정상 제재입니다. 공시 내용의 <strong>검증을 거부·방해하거나, 검증 결과에 따른 수정 요청을 이행하지 않는 경우</strong>도 같은 법정 상한의 과태료 대상입니다. <a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%82%B0%EC%97%85%EC%9D%98%EC%A7%84%ED%9D%A5%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0/%EC%A0%9C41%EC%A1%B0">정보보호산업법 제41조제1항</a></p>
+<p>보안담당자는 지금부터 <strong>우리 회사의 적용 여부, 2026년 실적 자료, 부서별 책임자와 경영진 확인 일정</strong>을 정리해 두면 좋습니다. 공시를 계기로 보안 투자와 인력을 실제 경영 의사결정에 연결하는 것이 중요합니다.</p>
+<p><em>2026년 11월 1일 기준으로, 2027년 1월 1일 시행되는 개정 시행령과 공식 안내를 반영했습니다.</em></p>
+</div>
+      </article>
+    </main>
+    <footer><p>사이버보안 · 개인정보보호 · 정보보호 거버넌스</p><p>© 2026 Prifoxy. All rights reserved.</p><p><a href="#privacy" data-privacy-open aria-haspopup="dialog" aria-controls="privacy">개인정보 처리방침</a></p></footer>
+  <dialog id="privacy" class="privacy-dialog" aria-labelledby="privacy-title"><div class="privacy-dialog-heading" data-nosnippet><div><span>PRIVACY</span><h2 id="privacy-title">개인정보 처리방침</h2></div><button type="button" data-privacy-close aria-label="개인정보 처리방침 닫기" autofocus>닫기 <span aria-hidden="true">×</span></button></div><div class="privacy-dialog-content" data-nosnippet><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</div></dialog><noscript><section class="privacy-fallback" data-nosnippet><h2>개인정보 처리방침</h2><p><strong>방문 통계</strong><br>같은 브라우저의 방문을 한국 시간 기준 하루 한 번 집계합니다. 무작위 식별자를 브라우저에 저장하고 서버에는 해시한 중복 확인값을 보관합니다. 지난 날짜의 확인값은 자정 이후 정리하며, 집계 수치는 유지합니다. IP 주소와 방문 페이지는 집계 저장소에 보관하지 않습니다.</p>
+
+<p><strong>사이트 보안과 외부 서비스</strong><br>과도한 요청을 제한하기 위해 IP 주소를 사용합니다. Cloudflare·GitHub도 사이트 제공과 보안을 위해 접속 정보를 처리할 수 있으며, Turnstile은 IP·브라우저 정보를 봇 차단과 탐지 기능 개선에 이용합니다. 외부 서비스에서 정보가 국외 처리될 수 있고, 보관에는 각 업체의 정책이 적용됩니다.<br><a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener noreferrer">Cloudflare Turnstile</a> · <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare</a> · <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub</a></p>
+
+<p><strong>브라우저 저장정보</strong><br>방문 식별자는 다른 날짜에 재방문하면 교체하고, 화면 모드 설정은 브라우저에 유지합니다. 브라우저의 ‘쿠키 및 사이트 데이터’ 설정에서 삭제하거나 저장을 제한할 수 있습니다. 제한하면 방문 집계와 화면 설정 저장이 작동하지 않을 수 있습니다.</p>
+
+<p class="privacy-meta">운영자: Prifoxy<br>최종 수정일: <time datetime="2026-09-08">2026년 9월 8일</time></p>
+</section></noscript>
+  </body>
+</html>
+

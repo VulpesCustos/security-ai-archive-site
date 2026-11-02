@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="716" viewBox="0 0 400 716" role="img" aria-labelledby="title desc">
+  <title id="title">COBIT 5의 거버넌스와 관리</title>
+  <desc id="desc">위쪽 거버넌스 영역의 EDM은 평가·방향 제시·감독을 수행합니다. 아래쪽 관리 영역의 APO, BAI, DSS, MEA는 계획·구축·운영·점검을 다룹니다. 아래로 향하는 화살표는 방향·우선순위·자원의 전달, 위로 향하는 화살표는 성과·위험·개선 사항의 환류입니다.</desc>
+  <defs>
+    <marker id="forward" viewBox="0 0 10 10" markerWidth="8" markerHeight="8" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#124a34" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="feedback" viewBox="0 0 10 10" markerWidth="8" markerHeight="8" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#956122" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="400" height="716" rx="20" fill="#faf9f5"/>
+  <g font-family="Pretendard, Malgun Gothic, sans-serif">
+    <text x="24" y="47" fill="#124a34" font-size="28" font-weight="700">방향과 실행의 연결</text>
+    <text x="24" y="81" fill="#52675d" font-size="20">COBIT 5 · 거버넌스와 관리</text>
+    <rect x="24" y="112" width="352" height="196" rx="20" fill="#124a34"/>
+    <text x="48" y="160" fill="#ffffff" font-size="30" font-weight="700">거버넌스</text>
+    <text x="48" y="204" fill="#f1f6f1" font-size="23">평가 · 방향 제시 · 감독</text>
+    <rect x="48" y="235" width="86" height="44" rx="12" fill="#e8f1e8"/>
+    <text x="91" y="265" text-anchor="middle" fill="#124a34" font-size="24" font-weight="700">EDM</text>
+    <path d="M104 308 V490" fill="none" stroke="#124a34" stroke-width="3" marker-end="url(#forward)"/>
+    <path d="M296 493 V311" fill="none" stroke="#956122" stroke-width="3" marker-end="url(#feedback)"/>
+    <rect x="27" y="358" width="154" height="78" rx="12" fill="#faf9f5"/>
+    <rect x="219" y="358" width="154" height="78" rx="12" fill="#faf9f5"/>
+    <g text-anchor="middle" font-size="20" font-weight="600">
+      <text x="104" y="386" fill="#124a34">방향·우선순위</text>
+      <text x="104" y="416" fill="#124a34">자원 배분 ↓</text>
+      <text x="296" y="386" fill="#80501c">성과·위험</text>
+      <text x="296" y="416" fill="#80501c">개선 사항 ↑</text>
+    </g>
+    <rect x="24" y="493" width="352" height="197" rx="20" fill="#e7eeea" stroke="#bfd0c5" stroke-width="1.5"/>
+    <text x="48" y="541" fill="#124a34" font-size="30" font-weight="700">관리</text>
+    <text x="48" y="585" fill="#203f32" font-size="23">계획 · 구축 · 운영 · 점검</text>
+    <rect x="48" y="617" width="304" height="44" rx="12" fill="#ffffff"/>
+    <text x="200" y="647" text-anchor="middle" fill="#124a34" font-size="22" font-weight="700">APO · BAI · DSS · MEA</text>
+  </g>
+</svg>
