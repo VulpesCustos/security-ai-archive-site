@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="368" viewBox="0 0 760 666" role="img" aria-labelledby="title desc">
+  <title id="title">유출 사실 통지에 더해 유출 가능성 통지 도입</title>
+  <desc id="desc">기존에는 유출 사실을 인지하면 이용자에게 통지했습니다. 개정 후에는 법령상 통지 요건에 해당하는 유출 가능성을 인지한 경우에도 이용자에게 지체 없이 통지합니다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto"><path d="M2 2 7 5 2 8" fill="none" stroke="#46695a" stroke-width="2"/></marker>
+    <g id="phone" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="56" height="84" rx="12"/><path d="M18 12h20M23 71h10"/><path d="m15 41 9 9 18-20"/></g>
+    <g id="document" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 0h43l19 19v65H4zM47 0v20h19M18 36h32M18 50h23M18 64h15"/></g>
+  </defs>
+  <rect width="760" height="666" rx="28" fill="#f6f5ed"/>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif" transform="translate(0 -54)">
+    <text x="44" y="113" font-size="42" font-weight="700" fill="#173e30">유출 가능성도</text>
+    <text x="44" y="164" font-size="42" font-weight="700" fill="#173e30">이용자에게 알립니다</text>
+    <rect x="32" y="200" width="696" height="202" rx="22" fill="#fff" stroke="#dadfd8" stroke-width="2"/>
+    <rect x="52" y="220" width="84" height="40" rx="20" fill="#e9eeea"/>
+    <text x="94" y="249" text-anchor="middle" font-size="27" font-weight="700" fill="#51685c">기존</text>
+    <use href="#document" x="204" y="225" color="#637b6e"/>
+    <path d="M335 275h88" stroke="#46695a" stroke-width="4" marker-end="url(#arrow)"/>
+    <use href="#phone" x="502" y="226" color="#637b6e"/>
+    <text x="236" y="361" text-anchor="middle" font-size="31" font-weight="700" fill="#354d40">유출 사실 인지</text>
+    <text x="531" y="361" text-anchor="middle" font-size="31" font-weight="700" fill="#354d40">이용자 통지</text>
+    <rect x="32" y="424" width="696" height="218" rx="22" fill="#e1efe3" stroke="#85ac91" stroke-width="2"/>
+    <rect x="52" y="445" width="84" height="40" rx="20" fill="#235d43"/>
+    <text x="94" y="474" text-anchor="middle" font-size="27" font-weight="700" fill="#fff">신설</text>
+    <path d="m237 454 47 80h-94z" fill="#f7d78c" stroke="#98701c" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M237 479v24" stroke="#735416" stroke-width="6" stroke-linecap="round"/><circle cx="237" cy="516" r="3.8" fill="#735416"/>
+    <path d="M335 494h88" stroke="#46695a" stroke-width="4" marker-end="url(#arrow)"/>
+    <use href="#phone" x="502" y="447" color="#235d43"/>
+    <text x="236" y="578" text-anchor="middle" font-size="30" font-weight="700" fill="#173e30">유출 가능성 인지</text>
+    <text x="531" y="578" text-anchor="middle" font-size="31" font-weight="700" fill="#173e30">이용자 통지</text>
+    <text x="531" y="618" text-anchor="middle" font-size="27" fill="#235d43">지체 없이</text>
+    <text x="44" y="690" font-size="28" fill="#4b6155">법령상 통지 요건에 해당하는 경우 적용</text>
+  </g>
+</svg>
