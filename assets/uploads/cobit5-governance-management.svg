@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="550" viewBox="0 0 900 550" role="img" aria-labelledby="title desc">
+  <title id="title">COBIT 5의 거버넌스와 관리</title>
+  <desc id="desc">거버넌스는 평가·방향 제시·감독을 수행하는 EDM 영역입니다. 관리는 계획·구축·운영·점검을 다루는 APO, BAI, DSS, MEA 영역입니다. 방향·우선순위·자원은 거버넌스에서 관리로 전달되고, 성과·위험·개선 사항은 관리에서 거버넌스로 돌아갑니다.</desc>
+  <defs>
+    <marker id="forward" viewBox="0 0 10 10" markerWidth="9" markerHeight="9" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#124a34" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="feedback" viewBox="0 0 10 10" markerWidth="9" markerHeight="9" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#956122" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="900" height="550" rx="24" fill="#faf9f5"/>
+  <g font-family="Pretendard, Malgun Gothic, sans-serif">
+    <text x="36" y="57" fill="#124a34" font-size="32" font-weight="700">방향과 실행이 서로 연결됩니다</text>
+    <text x="36" y="94" fill="#52675d" font-size="22">COBIT 5 · 거버넌스와 관리의 관계</text>
+    <path d="M210 205 V182 Q210 168 224 168 H676 Q690 168 690 182 V202" fill="none" stroke="#124a34" stroke-width="3" marker-end="url(#forward)"/>
+    <text x="450" y="149" text-anchor="middle" fill="#124a34" font-size="24" font-weight="600">방향 · 우선순위 · 자원</text>
+    <rect x="40" y="205" width="340" height="216" rx="20" fill="#124a34"/>
+    <text x="70" y="257" fill="#ffffff" font-size="32" font-weight="700">거버넌스</text>
+    <text x="70" y="303" fill="#f1f6f1" font-size="24">평가 · 방향 제시 · 감독</text>
+    <rect x="70" y="340" width="90" height="44" rx="12" fill="#e8f1e8"/>
+    <text x="115" y="370" text-anchor="middle" fill="#124a34" font-size="24" font-weight="700">EDM</text>
+    <rect x="520" y="205" width="340" height="216" rx="20" fill="#e7eeea" stroke="#bfd0c5" stroke-width="1.5"/>
+    <text x="550" y="257" fill="#124a34" font-size="32" font-weight="700">관리</text>
+    <text x="550" y="303" fill="#203f32" font-size="24">계획 · 구축 · 운영 · 점검</text>
+    <rect x="550" y="340" width="280" height="44" rx="12" fill="#ffffff"/>
+    <text x="690" y="370" text-anchor="middle" fill="#124a34" font-size="22" font-weight="700">APO · BAI · DSS · MEA</text>
+    <path d="M690 421 V457 Q690 471 676 471 H224 Q210 471 210 457 V424" fill="none" stroke="#956122" stroke-width="3" marker-end="url(#feedback)"/>
+    <text x="450" y="511" text-anchor="middle" fill="#80501c" font-size="24" font-weight="600">성과 · 위험 · 개선 사항</text>
+  </g>
+</svg>

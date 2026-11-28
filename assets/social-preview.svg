@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>Prifoxy — 사이버보안 · 개인정보보호 · 정보보호 거버넌스</title>
+  <rect width="1200" height="630" fill="#181a1d"/>
+  <rect x="32" y="32" width="1136" height="566" rx="20" fill="none" stroke="#363a40" stroke-width="2"/>
+  <!-- Reuse the site's fox favicon, with its original proportions and colors. -->
+  <svg x="84" y="166" width="112" height="112" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="15" fill="#24272b"/>
+    <path d="M14 49Q10 33 18 24L19 8Q29 13 32 24Q40 25 46 33L56 36L53 42L43 45Q37 51 29 55Q20 55 14 49Z" fill="#d68d55"/>
+    <path d="M22 15L23 28L29 25Z" fill="#24272b"/>
+    <path d="M17 38Q29 43 35 37Q42 40 53 38L53 42L43 45Q37 51 29 55Q23 50 17 38Z" fill="#fff2dc"/>
+    <path d="M37 31L41 33" stroke="#24272b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M50 35L56 36L54 40L50 39Z" fill="#24272b"/>
+  </svg>
+  <g font-family="Malgun Gothic, sans-serif">
+    <text x="228" y="256" fill="#e4e6e8" font-size="112" font-weight="700" letter-spacing="-4">Prifoxy</text>
+    <text x="84" y="366" fill="#cbd4ce" font-size="34" font-weight="600">사이버보안 · 개인정보보호 · 정보보호 거버넌스</text>
+    <text x="84" y="422" fill="#a8adb4" font-size="26">기술과 관리 체계를 함께 기록합니다.</text>
+    <path d="M84 486H1116" stroke="#363a40" stroke-width="2"/>
+    <text x="84" y="542" fill="#a8adb4" font-size="25">prifoxy.com</text>
+  </g>
+</svg>

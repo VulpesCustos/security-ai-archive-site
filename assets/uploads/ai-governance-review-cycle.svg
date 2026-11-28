@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">설계부터 운영까지 이어지는 보안성 검토</title>
+  <desc id="desc">설계 단계에서 데이터와 권한을 검토하고, 오픈 전에 통제 작동과 조치 결과를 확인하며, 운영 중 이상 동작을 관찰하고 대응합니다. 모델, 데이터, 연결 도구, 권한이 바뀌면 영향에 따라 설계와 검증을 다시 살펴봅니다. 기업 적용 예시입니다.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#49806a" stroke-width="1.8"/></marker></defs>
+  <rect width="960" height="600" rx="28" fill="#f5f5ef"/>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+    <text x="42" y="52" font-size="16" letter-spacing="2" fill="#62806e">AI SECURITY GOVERNANCE · 02</text>
+    <text x="42" y="107" font-size="38" font-weight="700" fill="#173e30">설계부터 운영까지 이어지는 검토</text>
+    <text x="42" y="146" font-size="21" fill="#566b60">기업의 보안성 검토에 적용할 수 있는 흐름 예시</text>
+    <g fill="#fff" stroke="#d8e2d9" stroke-width="2"><rect x="40" y="190" width="258" height="223" rx="20"/><rect x="352" y="190" width="256" height="223" rx="20"/><rect x="662" y="190" width="258" height="223" rx="20"/></g>
+    <path d="M308 299 H338" fill="none" stroke="#49806a" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M618 299 H648" fill="none" stroke="#49806a" stroke-width="3" marker-end="url(#arrow)"/>
+    <g fill="#e4eee5"><circle cx="83" cy="232" r="22"/><circle cx="395" cy="232" r="22"/><circle cx="705" cy="232" r="22"/></g>
+    <g font-size="20" font-weight="700" fill="#38634b" text-anchor="middle"><text x="83" y="239">1</text><text x="395" y="239">2</text><text x="705" y="239">3</text></g>
+    <g font-size="27" font-weight="700" fill="#244c39"><text x="118" y="241">설계 단계</text><text x="430" y="241">오픈 전</text><text x="740" y="241">운영 중</text></g>
+    <g font-size="22" fill="#435f50" text-anchor="middle"><text x="169" y="299">데이터 흐름 확인</text><text x="169" y="337">권한 · 책임 정하기</text><text x="169" y="375">사용 조건 설계</text><text x="480" y="299">통제 작동 검증</text><text x="480" y="337">문제 조치 · 재확인</text><text x="480" y="375">남은 위험 판단</text><text x="791" y="299">이상 동작 확인</text><text x="791" y="337">중단 · 복구 준비</text><text x="791" y="375">변경 영향 검토</text></g>
+    <path d="M792 424 V462 Q792 478 776 478 H185 Q169 478 169 462 V429" stroke="#49806a" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <rect x="241" y="455" width="478" height="45" rx="22" fill="#173e30"/>
+    <text x="480" y="484" font-size="22" font-weight="700" fill="#f2f6ec" text-anchor="middle">변경 영향에 따라 다시 검토 · 검증</text>
+    <text x="480" y="549" text-anchor="middle" font-size="24" fill="#435f50">모델 · 검색 데이터 · 연결 도구 · 실행 권한</text>
+    <text x="480" y="579" text-anchor="middle" font-size="18" fill="#728579">설정이 바뀌면 기존 점검 결과의 유효 범위도 확인합니다.</text>
+  </g>
+</svg>

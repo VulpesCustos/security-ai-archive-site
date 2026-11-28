@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="854" viewBox="0 0 400 854" role="img" aria-labelledby="title desc">
+  <title id="title">COBIT 5 목표 캐스케이드의 적용 예시</title>
+  <desc id="desc">접근권한 관리를 예로 든 목표 연결입니다. 위에서 아래로 이해관계자의 요구, 기업의 목표, IT 관련 목표, 실행 요소의 목표가 이어집니다. 고객정보 보호라는 요구를 고객 신뢰와 안정적인 서비스, 부적절한 정보 접근 위험 감소, 정해진 기준 안의 권한 회수와 완료 확인으로 구체화합니다. 설명을 위한 예시이며 공식 목표 명칭을 그대로 옮긴 것이 아닙니다.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" markerWidth="8" markerHeight="8" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#547666" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+  <rect width="400" height="854" rx="20" fill="#faf9f5"/>
+  <g font-family="Pretendard, Malgun Gothic, sans-serif">
+    <text x="24" y="47" fill="#124a34" font-size="28" font-weight="700">목표를 실무에 연결하기</text>
+    <text x="24" y="82" fill="#52675d" font-size="20">접근권한 관리를 예로 든 목표 연결</text>
+    <g stroke-width="1.5">
+      <rect x="24" y="114" width="352" height="138" rx="18" fill="#124a34" stroke="#124a34"/>
+      <rect x="24" y="302" width="352" height="138" rx="18" fill="#e7eeea" stroke="#bfd0c5"/>
+      <rect x="24" y="490" width="352" height="138" rx="18" fill="#e8efef" stroke="#c4d4d1"/>
+      <rect x="24" y="678" width="352" height="150" rx="18" fill="#f5eddf" stroke="#ddc8aa"/>
+    </g>
+    <g fill="none" stroke="#547666" stroke-width="3" marker-end="url(#arrow)"><path d="M200 262 V290"/><path d="M200 450 V478"/><path d="M200 638 V666"/></g>
+    <g font-size="22" font-weight="700">
+      <text x="48" y="157" fill="#d8e8dc">01</text><text x="48" y="345" fill="#446954">02</text><text x="48" y="533" fill="#426b66">03</text><text x="48" y="721" fill="#80501c">04</text>
+    </g>
+    <g font-size="25" font-weight="700">
+      <text x="93" y="157" fill="#ffffff">이해관계자의 요구</text><text x="93" y="345" fill="#124a34">기업의 목표</text><text x="93" y="533" fill="#234e48">IT 관련 목표</text><text x="93" y="721" fill="#6d481e">실행 요소의 목표</text>
+    </g>
+    <g font-size="22">
+      <text x="48" y="207" fill="#f1f6f1">고객정보를 안전하게 보호</text>
+      <text x="48" y="395" fill="#203f32">고객 신뢰 · 안정적인 서비스</text>
+      <text x="48" y="583" fill="#203f39">부적절한 정보 접근 위험 감소</text>
+      <text x="48" y="765" fill="#49351d">정해진 기준 안에 권한 회수</text><text x="48" y="798" fill="#49351d">완료 여부 확인</text>
+    </g>
+  </g>
+</svg>
